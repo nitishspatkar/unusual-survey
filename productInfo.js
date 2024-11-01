@@ -61,5 +61,71 @@ const productInfo = {
   }
 };
 
-// Export productInfo for use in other files if using a module system
-// module.exports = productInfo; // Uncomment if using with Node.js or a module system
+// Show product details function
+function showDetails(productName) {
+  const product = productInfo[productName];
+  if (!product) return;
+
+  // Locate the clicked product item
+  const productItem = document.querySelector(`.product-item[data-name="${productName}"]`);
+
+  // Remove any existing details section
+  document.querySelectorAll(".product-details-temp").forEach(el => el.remove());
+
+  // Create a new details section
+  const detailsDiv = document.createElement("div");
+  detailsDiv.className = "product-details-temp p-4 bg-white rounded-lg shadow-md mt-4";
+  detailsDiv.innerHTML = `
+    <h2 class="text-xl font-semibold mb-2">${productName}</h2>
+    <p class="text-gray-600">${product.description}</p>
+    <div class="space-y-4 mt-4">
+      ${product.items.map(item => `
+        <div>
+          <p class="text-blue-600 font-semibold">${item.name}</p>
+          <p class="text-gray-700">${item.desc}</p>
+          <p class="text-gray-500 italic">Usage: ${item.usage}</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  // Insert the details section right after the clicked product item
+  productItem.parentNode.insertBefore(detailsDiv, productItem.nextSibling);
+}
+
+// Open and Close Form Functions
+function openForm(productName) {
+  document.getElementById("formModal").classList.add("show");
+  document.getElementById("productSelect").value = productName;
+}
+
+function closeForm() {
+  document.getElementById("formModal").classList.remove("show");
+}
+
+// Form Submission Function Using EmailJS
+function submitForm() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const whatsapp = document.getElementById("whatsapp").value;
+  const selectedProducts = Array.from(document.getElementById("productSelect").selectedOptions).map(option => option.value);
+  const moreInfo = document.getElementById("moreInfo").checked;
+
+  const templateParams = {
+    name: name,
+    email: email,
+    whatsapp: whatsapp,
+    selected_products: selectedProducts.join(", "),
+    more_info: moreInfo ? "Yes" : "No"
+  };
+
+  emailjs.send("service_4o2zrfj", "template_1a4wf69", templateParams, "B03UDczpmPzTeYb5c")
+  .then(() => {
+    alert("Thank you! Your interest has been recorded.");
+    closeForm();
+  }, (error) => {
+    console.error("Failed to send email:", error);
+    alert("There was an error submitting your interest. Please try again later.");
+  });
+}

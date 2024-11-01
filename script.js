@@ -1,4 +1,4 @@
-// Sample product information
+// Product Information
 const productInfo = {
   "Vetiver": {
     description: "Vetiver, also known as 'khus' in India, is a tall, fragrant grass known for its deep-rooted system. Primarily found in South India, it has been used for centuries in Ayurveda due to its cooling and grounding properties. Its roots are valued for their earthy scent and calming effects.",
@@ -12,10 +12,10 @@ const productInfo = {
     ]
   },
   "SoapBerries": {
-    description: "Soap berries, or 'reetha,' are the dried fruits of the soap nut tree, known for their natural saponin content that cleanses without harmful chemicals. Commonly used as an eco-friendly detergent and shampoo in India.",
+    description: "Soap berries, or 'reetha,' are fruits from the soap nut tree, used as a natural cleanser for centuries. Their natural saponin content makes them an eco-friendly alternative to synthetic detergents and shampoos.",
     items: [
-      { name: "Whole Berries", desc: "Used as a natural laundry detergent.", usage: "Place in a cloth bag for eco-friendly laundry." },
-      { name: "Powder", desc: "Used as a gentle shampoo and cleanser.", usage: "Mix with water to wash hair naturally." }
+      { name: "Whole Berries", desc: "Used for natural laundry detergent.", usage: "Place in a cloth bag for eco-friendly laundry." },
+      { name: "Powder", desc: "Acts as a natural shampoo and cleanser.", usage: "Mix with water for hair wash." }
     ]
   },
   "Kokum": {
@@ -51,7 +51,7 @@ const productInfo = {
       { name: "Oil", desc: "Amla-infused oil for hair nourishment.", usage: "Massage into scalp to promote hair growth." }
     ]
   },
-  "Jaswand/Hibiscus": {
+  "Jaswand": {
     description: "Hibiscus, known as 'jaswand' in India, is valued for its vibrant flowers and benefits for hair health. In Ayurveda, hibiscus is often used to improve hair growth and prevent premature graying.",
     items: [
       { name: "Dry", desc: "Dried hibiscus petals for tea or skincare.", usage: "Brew as tea or use in face masks." },
@@ -61,67 +61,82 @@ const productInfo = {
   }
 };
 
-
 // Show product details function
 function showDetails(productName) {
   const product = productInfo[productName];
-  
-  // Set product title and description
-  document.getElementById("product-title").textContent = productName;
-  document.getElementById("product-description").textContent = product.description;
+  if (!product) return;
 
-  // Populate product items list
-  const productItemsList = document.getElementById("product-items");
-  productItemsList.innerHTML = ""; // Clear previous items
+  // Remove any existing details section
+  document.querySelectorAll(".product-details-temp").forEach(el => el.remove());
 
-  product.items.forEach(item => {
-    const itemElement = document.createElement("li");
-    itemElement.classList.add("p-4", "bg-gray-50", "rounded-lg", "shadow", "mb-4");
+  // Locate the clicked product item
+  const productItem = document.querySelector(`.product-item[data-name="${productName}"]`);
 
-    const itemName = document.createElement("h4");
-    itemName.classList.add("text-lg", "font-semibold", "text-blue-600");
-    itemName.textContent = item.name;
-    itemElement.appendChild(itemName);
+  // Create a new details section
+  const detailsDiv = document.createElement("div");
+  detailsDiv.className = "product-details-temp p-4 bg-white rounded-lg shadow-md mt-4 transition-opacity duration-300";
+  detailsDiv.innerHTML = `
+    <h2 class="text-xl font-semibold mb-2">${productName}</h2>
+    <p class="text-gray-600">${product.description}</p>
+    <div class="space-y-4 mt-4">
+      ${product.items.map(item => `
+        <div>
+          <p class="text-blue-600 font-semibold">${item.name}</p>
+          <p class="text-gray-700">${item.desc}</p>
+          <p class="text-gray-500 italic">Usage: ${item.usage}</p>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+        </div>
+      `).join("")}
+    </div>
+  `;
 
-    const itemDesc = document.createElement("p");
-    itemDesc.classList.add("text-gray-600");
-    itemDesc.textContent = item.desc;
-    itemElement.appendChild(itemDesc);
+  // Insert the details section right after the clicked product item
+  productItem.parentNode.insertBefore(detailsDiv, productItem.nextSibling);
 
-    const itemUsage = document.createElement("p");
-    itemUsage.classList.add("text-sm", "text-gray-500", "italic");
-    itemUsage.textContent = `Usage: ${item.usage}`;
-    itemElement.appendChild(itemUsage);
-
-    const interestButton = document.createElement("button");
-    interestButton.classList.add("mt-2", "bg-blue-500", "text-white", "py-1", "px-3", "rounded", "hover:bg-blue-600");
-    interestButton.textContent = "I am interested";
-    interestButton.onclick = openForm;
-    itemElement.appendChild(interestButton);
-
-    productItemsList.appendChild(itemElement);
-  });
+  // Add transition class for smooth display
+  setTimeout(() => detailsDiv.classList.add("show"), 10); 
 }
 
 // Open form modal
-function openForm() {
-  document.getElementById("formModal").style.display = "flex";
+function openForm(productName) {
+  console.log("Opening form for:", productName);
+  const modal = document.getElementById("formModal");
+  if (modal) {
+    console.log("Modal element found");
+    modal.classList.add("show");
+    modal.style.display = "flex"; // Force display to ensure visibility
+    console.log("Show class added to modal and display set to flex");
+    document.getElementById("productSelect").value = productName;
+  } else {
+    console.log("Modal element not found");
+  }
 }
+
+
 
 // Close form modal
 function closeForm() {
-  document.getElementById("formModal").style.display = "none";
+  const modal = document.getElementById("formModal");
+  if (modal) {
+    modal.classList.remove("show");
+    modal.style.display = "none"; // Hide modal by setting display to none
+    console.log("Modal closed");
+  } else {
+    console.log("Modal element not found");
+  }
 }
 
-// Form submission handler (for future integration with EmailJS or backend)
-function submitForm() {
+
+// Form submission function using EmailJS
+function submitForm(event) {
+  event.preventDefault();
+
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const whatsapp = document.getElementById("whatsapp").value;
   const selectedProducts = Array.from(document.getElementById("productSelect").selectedOptions).map(option => option.value);
   const moreInfo = document.getElementById("moreInfo").checked;
 
-  // Prepare the template parameters
   const templateParams = {
     name: name,
     email: email,
@@ -130,13 +145,12 @@ function submitForm() {
     more_info: moreInfo ? "Yes" : "No"
   };
 
-  // Send the email using EmailJS
-  emailjs.send("service_4o2zrfj", "template_1a4wf69", templateParams)
-  .then(function(response) {
+  emailjs.send("your_service_id", "your_template_id", templateParams, "your_user_id")
+  .then(() => {
     alert("Thank you! Your interest has been recorded.");
     closeForm();
-  }, function(error) {
-    console.error("Failed to send email:", error); // Logs detailed error info
+  }, (error) => {
+    console.error("Failed to send email:", error);
     alert("There was an error submitting your interest. Please try again later.");
   });
 }
