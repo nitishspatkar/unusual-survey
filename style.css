@@ -1,0 +1,76 @@
+/* Custom Modal Overlay Styling */
+.form-modal {
+  display: none; /* Hidden by default, toggled via JS */
+  position: fixed;
+  inset: 0; /* Fullscreen overlay */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it appears above other content */
+}
+
+/* Smooth Transition for Modal Opening and Closing */
+.form-modal.show {
+  display: flex; /* Flex layout for centering */
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.modal-content {
+  max-width: 90%;
+  width: 500px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: 80vh; /* Prevents the modal from expanding beyond the viewport */
+}
+
+/* Close Button Styling */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* Fade-in Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Custom Form Styling Adjustments */
+form input, form select {
+  transition: border-color 0.2s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #3182ce; /* Tailwind's blue-500 */
+  outline: none;
+}
+
+/* Responsive Layout Tweaks */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .sidebar, .content, .modal-content {
+    width: 100%;
+  }
+}

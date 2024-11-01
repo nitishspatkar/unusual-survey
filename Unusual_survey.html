@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unusual - Natural Products</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="text-center py-8 bg-white shadow">
+    <h1 class="text-4xl font-bold">unusual</h1>
+    <h2 class="text-lg text-gray-600 mt-2">natural products</h2>
+  </header>
+
+  <!-- Main Container -->
+<div class="container mx-auto p-6 flex gap-8">
+  <!-- Sidebar with Fixed Width -->
+  <aside class="w-1/4 max-w-xs bg-gray-50 p-4 rounded-lg shadow-lg">
+    <h3 class="text-xl font-semibold mb-4 text-center">Products</h3>
+    <div class="flex flex-col space-y-4">
+      <!-- Product Items -->
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Vetiver')">
+  <img src="./icons/vetiver.png" alt="Vetiver Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Wala/Vetiver</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('SoapBerries')">
+  <img src="./icons/reetha.png" alt="Soap Berries Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Reetha/Soap Berries</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Kokum')">
+  <img src="./icons/kokum.png" alt="Kokum Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Kokum</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Rose')">
+  <img src="./icons/rose.png" alt="Rose Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Gulab/Rose</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Neem')">
+  <img src="./icons/neem.png" alt="Neem Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Neem</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Amla')">
+  <img src="./icons/amla.png" alt="Amla Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Amla</div>
+</div>
+
+<div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" onclick="showDetails('Jaswand/Hibiscus')">
+  <img src="./icons/jaswand.png" alt="Hibiscus Icon" class="mx-auto w-16 h-16 mb-2">
+  <div class="text-sm font-medium">Jaswand/Hibiscus</div>
+</div>
+
+    </div>
+  </aside>
+
+  <!-- Content Area with Fixed Width -->
+  <main class="flex-grow bg-white p-6 rounded-lg shadow-lg min-w-[50%] max-w-2xl">
+    <h3 class="text-2xl font-normal mb-4" id="product-title">Select a product to view details</h3>
+    <p class="text-gray-600 text-sm" id="product-description">Product details will appear here when you select an item from the left.</p>
+    <ul class="product-list mt-6 space-y-4 text-sm" id="product-items">
+      <!-- Dynamic product items will be added here -->
+    </ul>
+  </main>
+</div>
+  <!-- Modal for Interest Form -->
+  <div id="formModal" class="form-modal fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="modal-content bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-left">
+      <button onclick="closeForm()" class="close-button absolute top-2 right-2 text-gray-400 hover:text-gray-600">&times;</button>
+      <h3 class="text-2xl font-normal mb-4">I'm Interested</h3>
+      <div class="form-container space-y-4">
+        <div class="form-group">
+          <label for="name" class="block text-sm font-medium">First Name:</label>
+          <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="form-group">
+          <label for="email" class="block text-sm font-medium">Email:</label>
+          <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="form-group">
+          <label for="whatsapp" class="block text-sm font-medium">WhatsApp Number (Optional):</label>
+          <input type="tel" id="whatsapp" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="form-group">
+          <label for="productSelect" class="block text-sm font-medium">Select Products of Interest:</label>
+          <select id="productSelect" multiple class="w-full p-2 border border-gray-300 rounded">
+            <option>Vetiver</option>
+            <option>Soap Berries</option>
+            <option>Kokum</option>
+            <option>Rose</option>
+            <option>Neem</option>
+            <option>Amla</option>
+            <option>Jaswand/Hibiscus</option>
+          </select>
+        </div>
+        <div class="form-group flex items-center">
+          <input type="checkbox" id="moreInfo" class="mr-2">
+          <label for="moreInfo" class="text-sm text-gray-600">I would like to know about other unusual products.</label>
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button type="button" onclick="submitForm()" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Submit</button>
+          <button type="button" onclick="closeForm()" class="bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script includes -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("B03UDczpmPzTeYb5c");
+  })();
+</script>
+
+</body>
+</html>
