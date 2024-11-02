@@ -74,17 +74,19 @@ function showDetails(productName) {
 
   // Create a new details section
   const detailsDiv = document.createElement("div");
-  detailsDiv.className = "product-details-temp p-4 bg-white rounded-lg shadow-md mt-4 transition-opacity duration-300";
+  detailsDiv.className = "product-details-temp p-6 bg-white rounded-lg shadow-md mt-6";
   detailsDiv.innerHTML = `
-    <h2 class="text-xl font-semibold mb-2">${productName}</h2>
-    <p class="text-gray-600">${product.description}</p>
-    <div class="space-y-4 mt-4">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">${productName}</h2>
+    <p class="text-gray-700 mb-6">${product.description}</p>
+    <div class="space-y-4">
       ${product.items.map(item => `
-        <div>
-          <p class="text-blue-600 font-semibold">${item.name}</p>
-          <p class="text-gray-700">${item.desc}</p>
-          <p class="text-gray-500 italic">Usage: ${item.usage}</p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+        <div class="flex items-start bg-gray-50 p-4 rounded-lg shadow-sm">
+          <img src="https://placehold.co/40x40" alt="${item.name} Icon" class="w-10 h-10 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
+            <p class="text-gray-600">${item.desc} ${item.usage}</p>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+          </div>
         </div>
       `).join("")}
     </div>
@@ -96,6 +98,9 @@ function showDetails(productName) {
   // Add transition class for smooth display
   setTimeout(() => detailsDiv.classList.add("show"), 10); 
 }
+
+
+
 
 // Open form modal
 function openForm(productName) {
