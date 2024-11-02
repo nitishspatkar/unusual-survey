@@ -85,7 +85,7 @@ function showDetails(productName) {
           <div>
             <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
             <p class="text-gray-600">${item.desc} ${item.usage}</p>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">Tell me more!</button>
           </div>
         </div>
       `).join("")}
@@ -98,8 +98,6 @@ function showDetails(productName) {
   // Add transition class for smooth display
   setTimeout(() => detailsDiv.classList.add("show"), 10); 
 }
-
-
 
 
 
