@@ -79,16 +79,16 @@
         <button onclick="closeForm()" class="text-gray-600 hover:text-gray-900">&times;</button>
       </div>
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
-        <label for="name" class="block text-sm font-medium text-gray-700">First Name:</label>
+        <label for="name" class="block text-sm font-medium text-gray-700">My Name, just so that we can greet you with your name in emails:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
         
-        <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email, so that you can send me updates:</label>
         <input type="email" id="email" class="mt-1 mb-4 p-2 border rounded w-full" required>
         
-        <label for="whatsapp" class="block text-sm font-medium text-gray-700">WhatsApp Number (Optional):</label>
+        <label for="whatsapp" class="block text-sm font-medium text-gray-700">WhatsApp Number, for offers and new products:</label>
         <input type="text" id="whatsapp" class="mt-1 mb-4 p-2 border rounded w-full">
         
-        <label for="productSelect" class="block text-sm font-medium text-gray-700">Select Products of Interest:</label>
+        <label for="productSelect" class="block text-sm font-medium text-gray-700">What interests you:</label>
         <select id="productSelect" class="mt-1 mb-4 p-2 border rounded w-full" multiple>
           <option value="Vetiver">Vetiver</option>
           <option value="SoapBerries">Soap Berries</option>
@@ -101,7 +101,7 @@
         
         <label for="moreInfo" class="flex items-center">
           <input type="checkbox" id="moreInfo" class="mr-2">
-          I would like to know about other unusual products.
+          It's cool! Tell about other unusual products.
         </label>
         
         <div class="flex justify-end mt-4">

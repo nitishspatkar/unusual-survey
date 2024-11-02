@@ -14,7 +14,7 @@ const productInfo = {
   "SoapBerries": {
     description: "Soap berries, or 'reetha,' are fruits from the soap nut tree, used as a natural cleanser for centuries. Their natural saponin content makes them an eco-friendly alternative to synthetic detergents and shampoos.",
     items: [
-      { name: "Whole Berries", desc: "Used for natural laundry detergent.", usage: "Place in a cloth bag for eco-friendly laundry." },
+      { name: "Whole", desc: "Used for natural laundry detergent.", usage: "Place in a cloth bag for eco-friendly laundry." },
       { name: "Powder", desc: "Acts as a natural shampoo and cleanser.", usage: "Mix with water for hair wash." }
     ]
   },
@@ -30,7 +30,7 @@ const productInfo = {
     items: [
       { name: "Rose Water", desc: "Hydrating and soothing for the skin.", usage: "Spray on face as a refreshing toner." },
       { name: "Powder", desc: "Fragrant ingredient for skincare and haircare.", usage: "Mix into face masks or hair packs for fragrance and benefits." },
-      { name: "Marmalade", desc: "Sweet and tangy rose marmalade.", usage: "Spread on toast or add to desserts for a floral touch." }
+      { name: "Gulkand", desc: "Sweet and tangy rose marmalade.", usage: "Spread on toast or add to desserts for a floral touch." }
     ]
   },
   "Neem": {
@@ -81,7 +81,7 @@ function showDetails(productName) {
     <div class="space-y-4">
       ${product.items.map(item => `
         <div class="flex items-start bg-gray-50 p-4 rounded-lg shadow-sm">
-          <img src="https://placehold.co/40x40" alt="${item.name} Icon" class="w-10 h-10 mr-4">
+          <img src="./icons/${item.name.toLowerCase().replace(/\s+/g, '_')}.png" alt="${item.name} Icon" class="w-10 h-10 mr-4">
           <div>
             <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
             <p class="text-gray-600">${item.desc} ${item.usage}</p>
@@ -98,6 +98,7 @@ function showDetails(productName) {
   // Add transition class for smooth display
   setTimeout(() => detailsDiv.classList.add("show"), 10); 
 }
+
 
 
 

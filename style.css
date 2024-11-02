@@ -37,7 +37,6 @@
 }
 
 /* Product details styling */
-/* Custom styles for product details */
 #productDetails h3 {
   margin-bottom: 0.25rem;
 }
@@ -160,7 +159,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .intro-text {
   font-size: 1.125rem; /* lg */
