@@ -7,23 +7,30 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function() { emailjs.init("your_user_id"); })();  <!-- Replace "your_user_id" with your actual EmailJS user ID -->
+    (function() { emailjs.init("your_user_id"); })();
   </script>
   <script defer src="script.js"></script> <!-- Only one script.js file needed -->
 </head>
 <body class="bg-gray-100 font-sans antialiased">
-
+  
   <!-- Main Container -->
   <div class="container mx-auto py-8 px-4">
     <h1 class="text-3xl font-bold text-center mb-2">unusual</h1>
     <p class="text-center text-gray-600 mb-8">natural products</p>
-
+    
+    <!-- Introductory Text -->
+    <div class="intro-text text-center my-8 mx-auto max-w-md">
+      <p class="text-lg text-gray-700">
+        <p>Explore and tell us what do you think about our unique catalog of natural products, each with its own story and purpose.</p>
+      </p>
+    </div>
+    
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
+      
       <!-- Product List Column -->
       <div class="bg-gray-50 p-4 rounded-lg shadow-md">
         <h2 class="text-lg font-semibold mb-4">Products</h2>
-
+        
         <!-- Product Items -->
         <div class="space-y-4">
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Vetiver" onclick="showDetails('Vetiver')">
@@ -56,14 +63,14 @@
           </div>
         </div>
       </div>
-
+      
       <!-- Product Details Column -->
       <div id="details-container" class="col-span-2">
         <!-- Product details will dynamically appear here when a product is clicked -->
       </div>
     </div>
   </div>
-
+  
   <!-- Form Modal -->
   <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
@@ -74,13 +81,13 @@
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
         <label for="name" class="block text-sm font-medium text-gray-700">First Name:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
-
+        
         <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
         <input type="email" id="email" class="mt-1 mb-4 p-2 border rounded w-full" required>
-
+        
         <label for="whatsapp" class="block text-sm font-medium text-gray-700">WhatsApp Number (Optional):</label>
         <input type="text" id="whatsapp" class="mt-1 mb-4 p-2 border rounded w-full">
-
+        
         <label for="productSelect" class="block text-sm font-medium text-gray-700">Select Products of Interest:</label>
         <select id="productSelect" class="mt-1 mb-4 p-2 border rounded w-full" multiple>
           <option value="Vetiver">Vetiver</option>
@@ -91,12 +98,12 @@
           <option value="Amla">Amla</option>
           <option value="Jaswand">Jaswand/Hibiscus</option>
         </select>
-
+        
         <label for="moreInfo" class="flex items-center">
           <input type="checkbox" id="moreInfo" class="mr-2">
           I would like to know about other unusual products.
         </label>
-
+        
         <div class="flex justify-end mt-4">
           <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
           <button type="button" onclick="closeForm()" class="ml-2 bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>

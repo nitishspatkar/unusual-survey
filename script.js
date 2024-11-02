@@ -113,7 +113,6 @@ function openForm(productName) {
 }
 
 
-
 // Close form modal
 function closeForm() {
   const modal = document.getElementById("formModal");
