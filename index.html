@@ -20,9 +20,9 @@
     
     <!-- Introductory Text -->
     <div class="intro-text text-center my-8 mx-auto max-w-md">
-      <p class="text-lg text-gray-700">
-        <p>Explore and tell us what do you think about our catalog of natural products, each with its own story and purpose.</p>
-      </p>
+      <p>It is not a typical survey. It's more personal than that! We hope you enjoy simply exploring our ideas.</p>
+      <p>Tell us what you think about our catalog of natural products, each with its own story and purpose.</p>
+      <button class="contact-button" onclick="openForm()">Contact us</button>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -82,13 +82,13 @@
         <label for="name" class="block text-sm font-medium text-gray-700">My Name, just so that we can greet you with your proper name in emails:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
         
-        <label for="email" class="block text-sm font-medium text-gray-700">Email, so that you can send me updates and offers:</label>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email, so that we can send you updates and offers:</label>
         <input type="email" id="email" class="mt-1 mb-4 p-2 border rounded w-full" required>
         
-        <label for="whatsapp" class="block text-sm font-medium text-gray-700">Mobile Number with the country-code, if you like to talk to us:</label>
+        <label for="whatsapp" class="block text-sm font-medium text-gray-700">Mobile Number (with the country-code), if you like to talk to us:</label>
         <input type="text" id="whatsapp" class="mt-1 mb-4 p-2 border rounded w-full">
         
-        <label for="productSelect" class="block text-sm font-medium text-gray-700">What interests you:</label>
+        <label for="productSelect" class="block text-sm font-medium text-gray-700">And, what interests you:</label>
         <select id="productSelect" class="mt-1 mb-4 p-2 border rounded w-full" multiple>
           <option value="Vetiver">Vetiver</option>
           <option value="SoapBerries">Soap Berries</option>
@@ -102,6 +102,10 @@
         <label for="moreInfo" class="flex items-center">
           <input type="checkbox" id="moreInfo" class="mr-2">
           Tell me about other unusual products and their stories.
+        </label>
+        <label for="moreInfo" class="flex items-center">
+          <input type="checkbox" id="moreInfo" class="mr-2">
+          Sign me up for free for pre-booking!
         </label>
         
         <div class="flex justify-end mt-4">
