@@ -1,88 +1,108 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Animation for smooth fade-in-up effect */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* General styling for font and container */
+body {
+  font-family: 'Helvetica', sans-serif;
 }
 
-/* Utility class for fade-in-up effect */
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Mobile-first styling for intro section and button */
-.intro-text {
+/* Header styling */
+header {
+  padding: 16px;
   text-align: center;
-  max-width: 90%;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+header p {
+  color: #4A5568;
+  margin-top: 4px;
+}
+
+/* Main container styling */
+.container {
+  max-width: 100%;
   margin: 0 auto;
-  font-size: 1.1rem;
-  color: #4B5563;
+  padding: 1rem;
+}
+
+/* About page text styling */
+.text-center {
+  text-align: center;
+}
+
+.text-gray-700 {
+  color: #4A5568;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-relaxed {
   line-height: 1.6;
 }
 
-.intro-text p {
-  opacity: 0; /* Start invisible for animation */
-  margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.intro-text p:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.intro-text p:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.contact-button {
-  display: inline-block;
-  background-color: #ff5a5f;
-  color: #ffffff;
-  padding: 0.85rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 700;
+/* Card styling for image and text blocks */
+.card {
+  background-color: white;
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-text {
+  margin-top: 1rem;
+  font-size: 0.875rem;
   text-align: center;
-  margin-top: 1.5rem;
-  opacity: 0; /* Start invisible for animation */
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 1s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contact-button:hover {
-  background-color: #ff7a7f;
-  transform: translateY(-3px);
+/* Image styling */
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
-/* Tablet and desktop adjustments */
+/* Footer styling */
+footer {
+  text-align: center;
+  color: #A0AEC0;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+/* Responsive adjustments */
 @media (min-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1rem;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .intro-text {
-    font-size: 1.25rem;
+    max-width: 640px;
   }
 
-  .contact-button {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .card {
+    flex-direction: row;
+    padding: 1.5rem;
+  }
+
+  .about-image {
+    width: 150px;
+    margin-right: 1rem;
+  }
+
+  .card-text {
+    text-align: left;
+    font-size: 1rem;
   }
 }
