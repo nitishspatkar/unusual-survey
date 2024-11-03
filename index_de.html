@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unusual - natürliche Produkte</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() { emailjs.init("your_user_id"); })();
+  </script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+  <!-- Language switcher -->
+  <div class="language-switcher text-center mt-4">
+    <a href="index.html">English</a> | <a href="index_de.html">Deutsch</a> | <a href="index_fr.html">Français</a>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container mx-auto py-8 px-4">
+    <h1 class="text-3xl font-bold text-center mb-2">unusual</h1>
+    <p class="text-center text-gray-600 mb-8">natürliche Produkte</p>
+    
+    <!-- Introductory Text -->
+    <div class="intro-text text-center my-8 mx-auto max-w-md space-y-4 animate-fade-in-up">
+      <p class="text-gray-700 text-lg leading-relaxed">Entdecken Sie unseren einzigartigen Katalog natürlicher Produkte und teilen Sie uns Ihre Meinung mit. Jedes Produkt hat seine eigene Geschichte und einen bestimmten Zweck.</p>
+      <p class="text-gray-700 text-lg leading-relaxed">Dies ist keine typische Umfrage, sondern persönlicher! Wir hoffen, Sie haben Freude daran, unsere Ideen zu entdecken.</p>
+      <button class="contact-button bg-red-500 text-white px-6 py-3 font-bold rounded-lg shadow-lg hover:bg-red-600 transform hover:-translate-y-1 transition duration-300 ease-in-out" onclick="openForm()">Kontaktieren Sie uns</button>
+      <a href="about_de.html" class="about-button inline-block bg-blue-500 text-white px-6 py-3 font-bold rounded-lg shadow-lg hover:bg-blue-600 transform hover:-translate-y-1 transition duration-300 ease-in-out">Über uns</a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Product List Column -->
+      <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+        <h2 class="text-lg font-semibold mb-4">Produkte</h2>
+
+        <!-- Product Items -->
+        <div class="space-y-4">
+          <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Vetiver" onclick="showDetails('Vetiver')">
+            <img src="./icons/vetiver.png" alt="Vetiver Icon" class="mx-auto w-16 h-16 mb-2">
+            <div class="text-sm font-medium">Wala/Vetiver</div>
+          </div>
+          <!-- Other product items here, translated as needed -->
+        </div>
+      </div>
+      
+      <!-- Product Details Column -->
+      <div id="details-container" class="col-span-2">
+        <!-- Product details will dynamically appear here when a product is clicked -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">Mehr erfahren</h2>
+        <button onclick="closeForm()" class="text-gray-600 hover:text-gray-900">&times;</button>
+      </div>
+      <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
+        <!-- Form fields, translated as needed -->
+      </form>
+    </div>
+  </div>
+  <footer class="text-center p-4 text-gray-500">
+    &copy; 2024 Unusual natural products
+  </footer>
+</body>
+</html>
