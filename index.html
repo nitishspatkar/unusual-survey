@@ -100,7 +100,7 @@
   <footer class="text-center p-4 text-gray-500" id="footerText">© 2024 Unusual Natural Products</footer>
 
   <!-- Form Modal -->
-  <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden items-center justify-center">
+  <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden flex items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
       <h2 id="formHeading" class="text-xl font-bold mb-4">Tell me more</h2>
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
@@ -124,16 +124,20 @@
           <option value="Jaswand">Jaswand/Hibiscus</option>
         </select>
   
-        <label id="otherProductsLabel" class="flex items-center mb-2">
-          <input type="checkbox" id="otherProducts" class="mr-2"> Tell me about other unusual products and their stories.
-        </label>
-        <label id="preBookingLabel" class="flex items-center mb-2">
-          <input type="checkbox" id="preBooking" class="mr-2"> Sign me up for free for pre-booking!
-        </label>
-        <label id="freeSamplesLabel" class="flex items-center mb-4">
-          <input type="checkbox" id="freeSamples" class="mr-2"> I would love a few free samples!
-        </label>
+        <!-- Checkbox options -->
+        <div class="mb-4">
+          <label class="flex items-center mb-2">
+            <input type="checkbox" id="otherProducts" class="mr-2"> <span id="otherProductsLabel">Tell me about other unusual products and their stories.</span>
+          </label>
+          <label class="flex items-center mb-2">
+            <input type="checkbox" id="preBooking" class="mr-2"> <span id="preBookingLabel">Sign me up for free for pre-booking!</span>
+          </label>
+          <label class="flex items-center">
+            <input type="checkbox" id="freeSamples" class="mr-2"> <span id="freeSamplesLabel">I would love a few free samples!</span>
+          </label>
+        </div>
   
+        <!-- Buttons -->
         <div class="flex justify-end mt-4">
           <button id="submitButton" type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
           <button id="cancelButton" type="button" onclick="closeForm()" class="ml-2 bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
@@ -141,5 +145,6 @@
       </form>
     </div>
   </div>
+  
 </body>
 </html>

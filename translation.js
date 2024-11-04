@@ -3,8 +3,8 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1:"It is not a typical survey. It's more personal than that. More than your contact data, we want to collect your thoughts and impressions.",
-      line2: "We also hope you simply enjoy exploring our list of products and photos!",
+      line1:"It is not a typical survey. It's more personal than that. We want to collect your thoughts and impressions about these perhaps unknown products.",
+      line2: "We hope you enjoy exploring the list of products and photos and tell us what you think.",
     },
     buttons: {
       contact: "Contact Us",

@@ -106,3 +106,35 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* Form Modal */
+#formModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formModal .w-full.max-w-md {
+  max-width: 95%; /* Adjust width for mobile */
+  padding: 1rem; /* Add padding for better spacing */
+}
+
+#formModal label {
+  display: block;
+}
+
+#formModal input[type="text"],
+#formModal input[type="email"],
+#formModal select {
+  width: 100%;
+}
+
+#formModal .flex.items-center {
+  flex-direction: column; /* Stack checkboxes vertically on mobile */
+  align-items: flex-start;
+}
+
+#formModal .flex.justify-end {
+  flex-direction: column;
+  gap: 8px;
+}
