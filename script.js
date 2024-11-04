@@ -15,14 +15,11 @@ const iconMap = {
   amla: "amla.png"
 };
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const lang = urlParams.get("lang") || "en";
   setLanguage(lang);
 });
-
-
 
 function setLanguage(lang) {
   if (!translationData[lang]) {
@@ -87,40 +84,63 @@ function switchLanguage(lang) {
   }
 }
 
-// product details
-function showDetails(productId) {
-  const lang = document.documentElement.lang;
-  const productData = translationData[lang]?.products[productId];
+function showDetails(productName) {
+  const lang = document.documentElement.lang; // get the current language
+  const productData = translationData[lang].products[productName];
+  if (!productData) return;
 
-  if (!productData) {
-    console.warn(`Translation for product '${productId}' not found.`);
-    return;
-  }
-
+  // Remove any existing details section
   document.querySelectorAll(".product-details-temp").forEach(el => el.remove());
 
-  const productItem = document.querySelector(`.product-item[data-name="${productId}"]`);
-  const detailsDiv = document.createElement("div");
-  detailsDiv.className = "product-details-temp p-6 bg-white rounded-lg shadow-md mt-6";
-
-  detailsDiv.innerHTML = `
-  ${productData.items.map(item => `
-    <div class="flex items-start bg-gray-50 p-4 rounded-lg shadow-sm">
-      <img src="./icons/${iconMap[item.iconKey] || 'default.png'}" alt="${item.name} Icon" class="w-10 h-10 mr-4">
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
-        <p class="text-gray-600">${item.desc}</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+  if (window.innerWidth >= 768) {
+    // For larger screens, populate details in the dedicated right column
+    const detailsContainer = document.getElementById("details-container");
+    detailsContainer.innerHTML = `
+      <h2 class="text-2xl font-semibold mb-2">${productData.name}</h2>
+      <p class="text-gray-600">${productData.description}</p>
+      <div class="space-y-4 mt-4">
+        ${productData.items.map(item => `
+          <div class="flex items-start bg-gray-50 p-4 rounded-lg shadow-sm">
+            <img src="./icons/${iconMap[item.iconKey] || 'default.png'}" alt="${item.name} Icon" class="w-10 h-10 mr-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
+              <p class="text-gray-600">${item.desc}</p>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+            </div>
+          </div>
+        `).join("")}
       </div>
-    </div>
-  `).join("")}
-`;
+    `;
+    detailsContainer.classList.remove("hidden");
+  } else {
+    // For mobile screens, show details below the selected product item
+    const productItem = document.querySelector(`.product-item[data-name="${productName}"]`);
+    const detailsDiv = document.createElement("div");
+    detailsDiv.className = "product-details-temp p-6 bg-white rounded-lg shadow-md mt-6";
+    detailsDiv.innerHTML = `
+      <h2 class="text-xl font-semibold mb-2">${productData.name}</h2>
+      <p class="text-gray-600">${productData.description}</p>
+      <div class="space-y-4 mt-4">
+        ${productData.items.map(item => `
+          <div class="flex items-start bg-gray-50 p-4 rounded-lg shadow-sm">
+            <img src="./icons/${iconMap[item.iconKey] || 'default.png'}" alt="${item.name} Icon" class="w-10 h-10 mr-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
+              <p class="text-gray-600">${item.desc}</p>
+              <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    `;
 
-  productItem.parentNode.insertBefore(detailsDiv, productItem.nextSibling);
-  setTimeout(() => detailsDiv.classList.add("show"), 10);
+    // Insert the details section right after the clicked product item
+    productItem.after(detailsDiv);
+  }
 }
 
 
+// Form functions
 function openForm() {
   document.getElementById("formModal").classList.remove("hidden");
 }
