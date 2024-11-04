@@ -9,92 +9,111 @@
   <script>
     (function() { emailjs.init("your_user_id"); })();
   </script>
-  <script defer src="script.js"></script> <!-- Only one script.js file needed -->
+  <script defer src="translation.js"></script>
+  <script defer src="script.js"></script>
 </head>
-<body class="bg-gray-100 font-sans antialiased">
-  <!-- Language switcher -->
+<body class="bg-gray-100 text-gray-800">
+  <!-- Language Switcher -->
   <div class="language-switcher text-center mt-4">
-    <a href="index.html">English</a> | <a href="index_de.html">Deutsch</a> | <a href="index_fr.html">Français</a>
+    <button onclick="setLanguage('en')" class="mx-2">English</button>|
+    <button onclick="setLanguage('de')" class="mx-2">Deutsch</button>|
+    <button onclick="setLanguage('fr')" class="mx-2">Français</button>
   </div>
-  
-  <!-- Main Container -->
-  <div class="container mx-auto py-8 px-4">
-    <h1 class="text-3xl font-bold text-center mb-2">unusual</h1>
-    <p class="text-center text-gray-600 mb-8">natural products</p>
-    
-    <!-- Introductory Text -->
-    <div class="intro-text text-center my-8 mx-auto max-w-md space-y-4 animate-fade-in-up">
-      <p class="text-gray-700 text-lg leading-relaxed">Explore and tell us what you think about our unique catalog of natural products, each with its own story and purpose.</p>
-      <p class="text-gray-700 text-lg leading-relaxed">It is not a typical survey. It's more personal than that! We hope you also enjoy simply exploring our ideas.</p>
-      <button class="contact-button bg-red-500 text-white px-6 py-3 font-bold rounded-lg shadow-lg hover:bg-red-600 transform hover:-translate-y-1 transition duration-300 ease-in-out" onclick="openForm()">Contact Us</button>
-      <a href="about.html" class="about-button inline-block bg-blue-500 text-white px-6 py-3 font-bold rounded-lg shadow-lg hover:bg-blue-600 transform hover:-translate-y-1 transition duration-300 ease-in-out">About Us</a>
+
+<!-- Intro Section -->
+<div class="container mx-auto p-4 text-center">
+  <h1 id="introTitle" class="text-3xl font-semibold mb-1"></h1>
+  <h2 id="introSubtitle" class="text-lg text-gray-500 mb-3"></h2>
+  <p id="introLine1" class="text-sm text-gray-700 mb-2"></p>
+  <p id="introLine2" class="text-sm text-gray-700 mb-4"></p>
+  <div class="flex justify-center space-x-2">
+    <button id="contactButton" onclick="openForm()" class="bg-red-500 text-white px-3 py-1 rounded text-sm"></button>
+    <button onclick="window.location.href='about.html'" class="about-button bg-blue-500 text-white px-3 py-1 rounded text-sm"></button>
   </div>
-  
-    
+</div>
+
+
+
+
+  <!-- Product List -->
+  <div class="container mx-auto p-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      
-      <!-- Product List Column -->
       <div class="bg-gray-50 p-4 rounded-lg shadow-md">
-        <h2 class="text-lg font-semibold mb-4">Products</h2>
-        
+        <h2 id="productsTitle" class="text-lg font-semibold mb-4">Products</h2>
+
         <!-- Product Items -->
-        <div class="space-y-4">
+        <div class="space-y-4" id="productList">
+          <!-- Each product item here will dynamically load based on language selection -->
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Vetiver" onclick="showDetails('Vetiver')">
             <img src="./icons/vetiver.png" alt="Vetiver Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Wala/Vetiver</div>
+            <div class="product-name text-sm font-medium" data-key="Vetiver.name">Vetiver</div>
+            <div class="product-description text-gray-600" data-key="Vetiver.description">Vetiver is known for its calming properties and is often used in aromatherapy and skincare for its earthy aroma.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="SoapBerries" onclick="showDetails('SoapBerries')">
             <img src="./icons/reetha.png" alt="Soap Berries Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Reetha/Soap Berries</div>
+            <div class="product-name text-sm font-medium" data-key="SoapBerries.name">Soap Berries</div>
+            <div class="product-description text-gray-600" data-key="SoapBerries.description">Natural soap berries are an eco-friendly alternative to chemical-based cleansers, used for laundry and hair care.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Kokum" onclick="showDetails('Kokum')">
             <img src="./icons/kokum.png" alt="Kokum Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Kokum</div>
+            <div class="product-name text-sm font-medium" data-key="Kokum.name">Kokum</div>
+            <div class="product-description text-gray-600" data-key="Kokum.description">Kokum is a tropical fruit known for its cooling properties and is used in skincare and refreshing summer drinks.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Rose" onclick="showDetails('Rose')">
             <img src="./icons/rose.png" alt="Rose Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Gulab/Rose</div>
+            <div class="product-name text-sm font-medium" data-key="Rose.name">Rose</div>
+            <div class="product-description text-gray-600" data-key="Rose.description">Rose water and extracts are cherished for their floral aroma and soothing effects in beauty and culinary uses.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Neem" onclick="showDetails('Neem')">
             <img src="./icons/neem.png" alt="Neem Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Neem</div>
+            <div class="product-name text-sm font-medium" data-key="Neem.name">Neem</div>
+            <div class="product-description text-gray-600" data-key="Neem.description">Neem is valued in traditional medicine for its antibacterial properties, used in skincare and health remedies.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Amla" onclick="showDetails('Amla')">
             <img src="./icons/amla.png" alt="Amla Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Amla</div>
+            <div class="product-name text-sm font-medium" data-key="Amla.name">Amla</div>
+            <div class="product-description text-gray-600" data-key="Amla.description">Amla, or Indian Gooseberry, is rich in vitamin C and is used to promote skin health and boost immunity.</div>
           </div>
+        
           <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Jaswand" onclick="showDetails('Jaswand')">
-            <img src="./icons/jaswand.png" alt="Jaswand Icon" class="mx-auto w-16 h-16 mb-2">
-            <div class="text-sm font-medium">Jaswand/Hibiscus</div>
+            <img src="./icons/jaswand.png" alt="Hibiscus Icon" class="mx-auto w-16 h-16 mb-2">
+            <div class="product-name text-sm font-medium" data-key="Jaswand.name">Hibiscus</div>
+            <div class="product-description text-gray-600" data-key="Jaswand.description">Hibiscus is popular in herbal teas and skincare, known for its vibrant color and antioxidant properties.</div>
           </div>
         </div>
+               
       </div>
-      
-      <!-- Product Details Column -->
+
+      <!-- Product Details -->
       <div id="details-container" class="col-span-2">
         <!-- Product details will dynamically appear here when a product is clicked -->
       </div>
     </div>
   </div>
-  
+
+  <!-- Footer -->
+  <footer class="text-center p-4 text-gray-500" id="footerText">© 2024 Unusual Natural Products</footer>
+
   <!-- Form Modal -->
   <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden items-center justify-center">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-xl font-bold">Tell me more</h2>
-        <button onclick="closeForm()" class="text-gray-600 hover:text-gray-900">&times;</button>
-      </div>
+      <h2 id="formHeading" class="text-xl font-bold mb-4">Tell me more</h2>
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
-        <label for="name" class="block text-sm font-medium text-gray-700">My Name, just so that we can greet you with your proper name in emails:</label>
+        <label id="nameLabel" for="name" class="block text-sm font-medium text-gray-700">How would you like us to greet you:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
-        
-        <label for="email" class="block text-sm font-medium text-gray-700">Email, so that we can send you updates and offers:</label>
+  
+        <label id="emailLabel" for="email" class="block text-sm font-medium text-gray-700">Email, so that we can send you updates and offers:</label>
         <input type="email" id="email" class="mt-1 mb-4 p-2 border rounded w-full" required>
-        
-        <label for="whatsapp" class="block text-sm font-medium text-gray-700">Mobile Number (with the country-code), if you like to talk to us:</label>
-        <input type="text" id="whatsapp" class="mt-1 mb-4 p-2 border rounded w-full">
-        
-        <label for="productSelect" class="block text-sm font-medium text-gray-700">And, what interests you:</label>
+  
+        <label id="mobileLabel" for="mobile" class="block text-sm font-medium text-gray-700">If you prefer receiving offers and updates on mobile:</label>
+        <input type="text" id="mobile" class="mt-1 mb-4 p-2 border rounded w-full">
+  
+        <label id="productLabel" for="productSelect" class="block text-sm font-medium text-gray-700">Tell us what's interesting:</label>
         <select id="productSelect" class="mt-1 mb-4 p-2 border rounded w-full" multiple>
           <option value="Vetiver">Vetiver</option>
           <option value="SoapBerries">Soap Berries</option>
@@ -104,29 +123,23 @@
           <option value="Amla">Amla</option>
           <option value="Jaswand">Jaswand/Hibiscus</option>
         </select>
-        
-        <label for="moreInfo" class="flex items-center">
-          <input type="checkbox" id="moreInfo" class="mr-2">
-          Tell me about other unusual products and their stories.
+  
+        <label id="otherProductsLabel" class="flex items-center mb-2">
+          <input type="checkbox" id="otherProducts" class="mr-2"> Tell me about other unusual products and their stories.
         </label>
-        <label for="moreInfo" class="flex items-center">
-          <input type="checkbox" id="moreInfo" class="mr-2">
-          Sign me up for free for pre-booking!
+        <label id="preBookingLabel" class="flex items-center mb-2">
+          <input type="checkbox" id="preBooking" class="mr-2"> Sign me up for free for pre-booking!
         </label>
-        <label for="moreInfo" class="flex items-center">
-          <input type="checkbox" id="moreInfo" class="mr-2">
-          I would love a few free samples!
+        <label id="freeSamplesLabel" class="flex items-center mb-4">
+          <input type="checkbox" id="freeSamples" class="mr-2"> I would love a few free samples!
         </label>
-        
+  
         <div class="flex justify-end mt-4">
-          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
-          <button type="button" onclick="closeForm()" class="ml-2 bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
+          <button id="submitButton" type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+          <button id="cancelButton" type="button" onclick="closeForm()" class="ml-2 bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
         </div>
       </form>
     </div>
   </div>
-  <footer class="text-center p-4 text-gray-500">
-    &copy; 2024 Unusual natural products
-  </footer>
 </body>
 </html>
