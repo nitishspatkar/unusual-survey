@@ -96,6 +96,31 @@ const translationData = {
     footer: {
       text: "© 2024 unusual natural products",
     },
+    about: {
+      heading: "About Us - unusual natural products",
+      introduction: "We are a small family from the coastal region of Maharashtra. The region around Ratnagiri is world famous for Alphonso mangoes, coconuts, jackfruits, and cashews. We have been growing and using several of these products since generations on our about 50 acre land.",
+      visit: "You are welcome to visit us!",
+      cards: [
+        { text: "Working in the red soil. Monsoon makes it all beautiful.", image: "farm_1.jpg" },
+        { text: "A young mango tree.", image: "farm_2.jpg" },
+        { text: "A young cashew tree.", image: "farm_3.jpg" },
+        { text: "Jackfruits.", image: "farm_4.jpg" },
+        { text: "The farm in summer.", image: "farm_5.jpg" },
+        { text: "Alphonso mango.", image: "farm_6.jpg" },
+        { text: "Cashew apple.", image: "farm_7.jpg" },
+        { text: "Mangoes.", image: "farm_8.jpg" },
+        { text: "Roasting cashews the old way.", image: "farm_9.jpg" },
+        { text: "Black pepper.", image: "farm_11.jpg" },
+        { text: "Betel nut trees.", image: "farm_12.jpg" },
+        { text: "The banana flower.", image: "farm_13.jpg" },
+        { text: "The backyard.", image: "home_2.jpg" },
+        { text: "The backyard.", image: "home_3.jpg" },
+        { text: "The village road.", image: "village_1.jpg" },
+        { text: "This is where we live.", image: "home_1.jpg" }
+      ],
+      backToHome: "Back to Home",
+      footer: "© 2024 unusual natural products",
+    }
   },
   de : {
     intro: {
@@ -194,6 +219,32 @@ const translationData = {
     footer: {
       text: "© 2024 unusual natural products",
     },
+    about: {
+      heading: "Über uns - ungewöhnliche Naturprodukte",
+      introduction: "Wir sind eine kleine Familie aus der Küstenregion von Maharashtra. Die Region um Ratnagiri ist weltberühmt für Alphonso-Mangos, Kokosnüsse, Jackfrüchte und Cashewnüsse. Wir bauen seit Generationen viele dieser Produkte auf unserem etwa 50 Hektar großen Land an und nutzen sie.",
+      visit: "Sie sind herzlich eingeladen, uns zu besuchen!",
+      cards: [
+        { text: "Arbeiten im roten Boden. Der Monsun macht alles schön.", image: "farm_1.jpg" },
+        { text: "Ein junger Mangobaum.", image: "farm_2.jpg" },
+        { text: "Ein junger Cashewbaum.", image: "farm_3.jpg" },
+        { text: "Jackfrüchte.", image: "farm_4.jpg" },
+        { text: "Die Farm im Sommer.", image: "farm_5.jpg" },
+        { text: "Alphonso-Mango.", image: "farm_6.jpg" },
+        { text: "Cashewapfel.", image: "farm_7.jpg" },
+        { text: "Mangos.", image: "farm_8.jpg" },
+        { text: "Cashews auf die alte Weise rösten.", image: "farm_9.jpg" },
+        { text: "Schwarzer Pfeffer.", image: "farm_11.jpg" },
+        { text: "Betelnusspalmen.", image: "farm_12.jpg" },
+        { text: "Die Bananenblüte.", image: "farm_13.jpg" },
+        { text: "Der Hinterhof.", image: "home_2.jpg" },
+        { text: "Der Hinterhof.", image: "home_3.jpg" },
+        { text: "Die Dorfstraße.", image: "village_1.jpg" },
+        { text: "Hier leben wir.", image: "home_1.jpg" }
+      ],
+      backToHome: "Zurück zur Startseite",
+      footer: "© 2024 unusual natural products",
+    }
+    
   },
   fr : {
     intro: {
@@ -292,6 +343,33 @@ const translationData = {
     footer: {
       text: "© 2024 unusual natural products",
     },
+    about: {
+      heading: "À propos de nous - produits naturels inhabituels",
+      introduction: "Nous sommes une petite famille de la région côtière du Maharashtra. La région autour de Ratnagiri est mondialement connue pour ses mangues Alphonso, noix de coco, jacquiers et noix de cajou. Nous cultivons et utilisons plusieurs de ces produits depuis des générations sur notre terrain d'environ 50 acres.",
+      visit: "Vous êtes les bienvenus pour nous rendre visite !",
+      cards: [
+        { text: "Travailler dans la terre rouge. La mousson rend tout magnifique.", image: "farm_1.jpg" },
+        { text: "Un jeune manguier.", image: "farm_2.jpg" },
+        { text: "Un jeune cajou.", image: "farm_3.jpg" },
+        { text: "Jacquiers.", image: "farm_4.jpg" },
+        { text: "La ferme en été.", image: "farm_5.jpg" },
+        { text: "Mangue Alphonso.", image: "farm_6.jpg" },
+        { text: "Pomme de cajou.", image: "farm_7.jpg" },
+        { text: "Mangues.", image: "farm_8.jpg" },
+        { text: "Rôtir des noix de cajou à l'ancienne.", image: "farm_9.jpg" },
+        { text: "Poivre noir.", image: "farm_11.jpg" },
+        { text: "Arbres à noix de bétel.", image: "farm_12.jpg" },
+        { text: "La fleur de bananier.", image: "farm_13.jpg" },
+        { text: "L'arrière-cour.", image: "home_2.jpg" },
+        { text: "L'arrière-cour.", image: "home_3.jpg" },
+        { text: "La route du village.", image: "village_1.jpg" },
+        { text: "C'est ici que nous vivons.", image: "home_1.jpg" }
+      ],
+      backToHome: "Retour à l'accueil",
+      footer: "© 2024 unusual natural products",
+    }
+    
+    
   }
 };
 

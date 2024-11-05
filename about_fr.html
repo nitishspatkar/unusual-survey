@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À propos - Unusual Natural Products</title>
+  <title>About Us - Unusual Natural Products</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Modular JavaScript files -->
+  <script  src="translation.js"></script>
+  <script  src="language.js"></script>
+  <script  src="product.js"></script>
+  <script  src="form.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
   <header class="bg-white shadow p-4">
     <h1 class="text-4xl font-bold text-center">unusual</h1>
     <p class="text-gray-600 text-center">natural products</p>
   </header>
-
+  
   <main class="container mx-auto p-4 space-y-8">
     <section class="text-center max-w-lg mx-auto">
-      <p class="text-gray-700 leading-relaxed mb-4">
-        Nous sommes une petite famille de la région côtière du Maharashtra. La région autour de Ratnagiri est mondialement connue pour ses mangues Alphonso, noix de coco, jacquiers et noix de cajou. Nous cultivons et utilisons plusieurs de ces produits depuis des générations sur nos 50 hectares de terres.
-      </p>
-      <p class="text-gray-700 font-semibold">Vous êtes les bienvenus pour nous rendre visite !</p>
+      <p id="about-introduction" class="text-gray-700 leading-relaxed mb-4"></p>
+      <p id="about-visit" class="text-gray-700 font-semibold"></p>
     </section>
-
-    <section class="space-y-8 max-w-lg mx-auto">
-      <div class="card">
-        <img src="./images/farm_1.jpg" alt="Image de la ferme 1" class="about-image">
-        <p class="card-text text-gray-600">Travail dans la terre rouge. La mousson rend tout magnifique.</p>
-      </div>
-      <!-- Additional images and descriptions translated -->
+    
+    <section id="about-cards" class="space-y-8 max-w-lg mx-auto">
     </section>
-
+    
     <div class="text-center mt-8">
-      <a href="index_fr.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors">
-        Retour à l'accueil
-      </a>
+      <a id="backToHome" href="index_fr.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors"></a>
     </div>
   </main>
-
-  <footer class="text-center p-4 text-gray-500">
-    &copy; 2024 Unusual natural products
-  </footer>
+  
+  <footer class="text-center p-4 text-gray-500" id="footerText"></footer>
 </body>
 </html>
