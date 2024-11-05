@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function() { emailjs.init("your_user_id"); })();
+    (function() { emailjs.init("B03UDczpmPzTeYb5c"); })();
   </script>
   <script defer src="translation.js"></script>
   <script defer src="script.js"></script>
@@ -27,9 +27,9 @@
     <p id="introLine1" class="text-sm text-gray-700 mb-2">It is not a typical survey. It's more personal than that.</p>
     <p id="introLine2" class="text-sm text-gray-700 mb-4">We hope you enjoy exploring the list of products and photos and tell us what you think.</p>
     <div class="flex justify-center space-x-2">
-      <button id="contactButton" onclick="openForm()" class="bg-red-500 text-white px-3 py-1 rounded text-sm">Contact Us</button>
-      <button onclick="window.location.href='about.html'" class="about-button bg-blue-500 text-white px-3 py-1 rounded text-sm">About Us</button>
-    </div>
+      <button id="contactButton" onclick="openForm()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-sm">Contact Us</button>
+      <button id="aboutButton" onclick="window.location.href='about.html'" class="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm">About Us</button>
+    </div>    
   </div>
 
   <!-- Main Content Area -->
@@ -38,46 +38,56 @@
     <div class="bg-gray-50 p-4 rounded-lg shadow-md">
       <h2 class="text-lg font-semibold mb-4 text-center">Products</h2>
       <div class="space-y-4" id="productList">
+       
         <!-- Product Items -->
+        
+        <!-- Vetiver -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Vetiver" onclick="showDetails('Vetiver')">
           <img src="./icons/vetiver.png" alt="Vetiver Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Vetiver.name">Vetiver</div>
-          <div class="product-description text-gray-600" data-key="Vetiver.description">Vetiver is known for its calming properties.</div>
+          <div class="product-name text-sm font-medium" data-key="Vetiver.name"></div>
+          <div class="product-description text-gray-600" data-key="Vetiver.description"></div>
         </div>
+
+        <!-- Reetha -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="SoapBerries" onclick="showDetails('SoapBerries')">
           <img src="./icons/reetha.png" alt="Soap Berries Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="SoapBerries.name">Soap Berries</div>
-          <div class="product-description text-gray-600" data-key="SoapBerries.description">Natural soap berries are an eco-friendly alternative to chemical-based cleansers, used for laundry and hair care.</div>
+          <div class="product-name text-sm font-medium" data-key="SoapBerries.name"></div>
+          <div class="product-description text-gray-600" data-key="SoapBerries.description"></div>
         </div>
         
+        <!-- Kokum -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Kokum" onclick="showDetails('Kokum')">
           <img src="./icons/kokum.png" alt="Kokum Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Kokum.name">Kokum</div>
-          <div class="product-description text-gray-600" data-key="Kokum.description">Kokum is a tropical fruit known for its cooling properties and is used in skincare and refreshing summer drinks.</div>
+          <div class="product-name text-sm font-medium" data-key="Kokum.name"></div>
+          <div class="product-description text-gray-600" data-key="Kokum.description"></div>
         </div>
         
+        <!-- Rose -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Rose" onclick="showDetails('Rose')">
           <img src="./icons/rose.png" alt="Rose Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Rose.name">Rose</div>
-          <div class="product-description text-gray-600" data-key="Rose.description">Rose water and extracts are cherished for their floral aroma and soothing effects in beauty and culinary uses.</div>
+          <div class="product-name text-sm font-medium" data-key="Rose.name"></div>
+          <div class="product-description text-gray-600" data-key="Rose.description"></div>
         </div>
         
+        <!-- Neem -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Neem" onclick="showDetails('Neem')">
           <img src="./icons/neem.png" alt="Neem Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Neem.name">Neem</div>
-          <div class="product-description text-gray-600" data-key="Neem.description">Neem is valued in traditional medicine for its antibacterial properties, used in skincare and health remedies.</div>
+          <div class="product-name text-sm font-medium" data-key="Neem.name"></div>
+          <div class="product-description text-gray-600" data-key="Neem.description"></div>
         </div>
         
+        <!-- Amla -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Amla" onclick="showDetails('Amla')">
           <img src="./icons/amla.png" alt="Amla Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Amla.name">Amla</div>
-          <div class="product-description text-gray-600" data-key="Amla.description">Amla, or Indian Gooseberry, is rich in vitamin C and is used to promote skin health and boost immunity.</div>
+          <div class="product-name text-sm font-medium" data-key="Amla.name"></div>
+          <div class="product-description text-gray-600" data-key="Amla.description"></div>
         </div>
         
+        <!-- Hibiscus -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Jaswand" onclick="showDetails('Jaswand')">
           <img src="./icons/jaswand.png" alt="Hibiscus Icon" class="mx-auto w-16 h-16 mb-2">
-          <div class="product-name text-sm font-medium" data-key="Jaswand.name">Hibiscus</div>
-          <div class="product-description text-gray-600" data-key="Jaswand.description">Hibiscus is popular in herbal teas and skincare, known for its vibrant color and antioxidant properties.</div>
+          <div class="product-name text-sm font-medium" data-key="Jaswand.name"></div>
+          <div class="product-description text-gray-600" data-key="Jaswand.description"></div>
         </div>
       </div>
     </div>
@@ -91,7 +101,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="text-center p-4 text-gray-500" id="footerText">© 2024 Unusual Natural Products</footer>
+  <footer class="text-center p-4 text-gray-500" id="footerText"></footer>
 
   <!-- Form Modal -->
   <div id="formModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden flex items-center justify-center">
@@ -104,9 +114,9 @@
         <label id="emailLabel" for="email" class="block text-sm font-medium text-gray-700">Email, so that we can send you updates and offers:</label>
         <input type="email" id="email" class="mt-1 mb-4 p-2 border rounded w-full" required>
   
-        <label id="mobileLabel" for="mobile" class="block text-sm font-medium text-gray-700">If you prefer receiving offers and updates on mobile:</label>
-        <input type="text" id="mobile" class="mt-1 mb-4 p-2 border rounded w-full">
-  
+        <label id="messageLabel" for="personalMessage" class="block text-sm font-medium text-gray-700">Personal message to us:</label>
+        <textarea id="personalMessage" rows="4" class="mt-1 mb-4 p-2 border rounded w-full" placeholder="Feel free to share any thoughts"></textarea>
+
         <label id="productLabel" for="productSelect" class="block text-sm font-medium text-gray-700">Tell us what's interesting:</label>
         <select id="productSelect" class="mt-1 mb-4 p-2 border rounded w-full" multiple>
           <option value="Vetiver">Vetiver</option>
@@ -115,7 +125,7 @@
           <option value="Rose">Rose</option>
           <option value="Neem">Neem</option>
           <option value="Amla">Amla</option>
-          <option value="Jaswand">Jaswand/Hibiscus</option>
+          <option value="Jaswand">Hibiscus</option>
         </select>
   
         <!-- Checkbox options -->
@@ -125,9 +135,6 @@
           </label>
           <label class="flex items-center mb-2">
             <input type="checkbox" id="preBooking" class="mr-2"> <span id="preBookingLabel">Sign me up for free for pre-booking!</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" id="freeSamples" class="mr-2"> <span id="freeSamplesLabel">I would love a few free samples!</span>
           </label>
         </div>
   

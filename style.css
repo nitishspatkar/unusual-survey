@@ -45,22 +45,6 @@ header p {
   color: #666;
 }
 
-/* Button styling */
-button {
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 0.875rem;
-}
-
-#contactButton {
-  background-color: #e53e3e;
-  color: white;
-}
-
-.about-button {
-  background-color: #3182ce;
-  color: white;
-}
 
 /* Container and product list layout */
 .container {

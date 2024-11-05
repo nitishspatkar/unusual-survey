@@ -10,6 +10,10 @@ const translationData = {
       contact: "Contact Us",
       about: "About Us",
     },
+    productDetails: {
+      title: "Product Details",
+      message: "Select a product to view details here.",
+    },
     products: {
       Vetiver: {
         name: "Vetiver",
@@ -79,19 +83,18 @@ const translationData = {
       },
     },
     form: {
-      heading: "Tell me more",
-      nameLabel: "How would you like us to greet you:",
+      heading: "I want to know more",
+      nameLabel: "Name- how would you like us to greet you:",
       emailLabel: "Email, so that we can send you updates and offers:",
-      mobileLabel: "If you prefer receiving offers and updates on mobile:",
-      productLabel: "Tell us what's interesting:",
-      otherProducts: "Tell me about other unusual products and their stories.",
+      personalMessageLabel: "Personal message to us:",
+      productLabel: "What intrigues you:",
+      otherProducts: "Tell me about other unusual products and their stories, also how to use those.",
       preBooking: "Sign me up for free for pre-booking!",
-      freeSamples: "I would love a few free samples!",
       submitButton: "Submit",
       cancelButton: "Cancel",
     },
     footer: {
-      text: "© 2024 Unusual Natural Products",
+      text: "© 2024 unusual natural products",
     },
   },
   de : {
@@ -104,6 +107,10 @@ const translationData = {
     buttons: {
       contact: "Kontakt",
       about: "Über uns",
+    },
+    productDetails: {
+      title: "Produktdetails",
+      message: "Wählen Sie ein Produkt aus, um hier Details anzuzeigen.",
     },
     products: {
       Vetiver: {
@@ -177,16 +184,15 @@ const translationData = {
       heading: "Erzählen Sie uns mehr",
       nameLabel: "Wie sollen wir Sie begrüßen:",
       emailLabel: "E-Mail, damit wir Ihnen Updates und Angebote senden können:",
-      mobileLabel: "Falls Sie Angebote und Updates lieber auf dem Handy erhalten möchten:",
+      personalMessageLabel: "Persönliche Nachricht an uns:",
       productLabel: "Teilen Sie uns mit, was Sie interessiert:",
       otherProducts: "Informieren Sie mich über andere ungewöhnliche Produkte und ihre Geschichten.",
       preBooking: "Melden Sie mich kostenlos für die Vorbestellung an!",
-      freeSamples: "Ich hätte gerne ein paar kostenlose Proben!",
       submitButton: "Absenden",
       cancelButton: "Abbrechen",
     },
     footer: {
-      text: "© 2024 Unusual Natural Products",
+      text: "© 2024 unusual natural products",
     },
   },
   fr : {
@@ -199,6 +205,10 @@ const translationData = {
     buttons: {
       contact: "Contactez-nous",
       about: "À propos",
+    },
+    productDetails: {
+      title: "Détails du produit",
+      message: "Sélectionnez un produit pour afficher les détails ici.",
     },
     products: {
       Vetiver: {
@@ -272,16 +282,15 @@ const translationData = {
       heading: "Dites-nous en plus",
       nameLabel: "Comment aimeriez-vous que nous vous saluions :",
       emailLabel: "Email, pour que nous puissions vous envoyer des mises à jour et des offres :",
-      mobileLabel: "Si vous préférez recevoir des offres et des mises à jour sur votre mobile :",
+      personalMessageLabel: "Message personnel pour nous :",
       productLabel: "Dites-nous ce qui vous intéresse :",
       otherProducts: "Informez-moi sur d'autres produits inhabituels et leurs histoires.",
       preBooking: "Inscrivez-moi gratuitement pour la pré-réservation !",
-      freeSamples: "J'aimerais recevoir quelques échantillons gratuits !",
       submitButton: "Envoyer",
       cancelButton: "Annuler",
     },
     footer: {
-      text: "© 2024 Unusual Natural Products",
+      text: "© 2024 unusual natural products",
     },
   }
 };

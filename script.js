@@ -38,7 +38,7 @@ function setLanguage(lang) {
   const contactButton = document.getElementById("contactButton");
   if (contactButton) contactButton.innerText = translations.buttons.contact;
 
-  const aboutButton = document.querySelector(".about-button");
+  const aboutButton = document.getElementById("aboutButton");
   if (aboutButton) aboutButton.innerText = translations.buttons.about;
 
   // Populate product descriptions
@@ -53,16 +53,20 @@ function setLanguage(lang) {
     }
   });
 
+  // Set product details title and message
+  document.querySelector("#details-container h2").innerText = translations.productDetails.title;
+  document.querySelector("#details-container p").innerText = translations.productDetails.message;
+
+
   // Set form text
   document.getElementById("formHeading").innerText = translations.form.heading;
   document.getElementById("nameLabel").innerText = translations.form.nameLabel;
   document.getElementById("emailLabel").innerText = translations.form.emailLabel;
-  document.getElementById("mobileLabel").innerText = translations.form.mobileLabel;
+  document.getElementById("personalMessage").innerText = translations.form.personalMessageLabel;
   document.getElementById("productLabel").innerText = translations.form.productLabel;
 
   document.getElementById("otherProductsLabel").innerText = translations.form.otherProducts;
   document.getElementById("preBookingLabel").innerText = translations.form.preBooking;
-  document.getElementById("freeSamplesLabel").innerText = translations.form.freeSamples;
   document.getElementById("submitButton").innerText = translations.form.submitButton;
   document.getElementById("cancelButton").innerText = translations.form.cancelButton;
 
@@ -105,7 +109,7 @@ function showDetails(productName) {
             <div>
               <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
               <p class="text-gray-600">${item.desc}</p>
-              <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+              
             </div>
           </div>
         `).join("")}
@@ -127,7 +131,7 @@ function showDetails(productName) {
             <div>
               <h3 class="text-lg font-semibold text-gray-800">${item.name}</h3>
               <p class="text-gray-600">${item.desc}</p>
-              <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2" onclick="openForm('${item.name}')">I am interested</button>
+              
             </div>
           </div>
         `).join("")}
@@ -150,6 +154,44 @@ function closeForm() {
 }
 
 function submitForm() {
-  alert("Form submitted!");
-  closeForm();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const mobile = document.getElementById("personalMessage").value;
+  const selectedProducts = Array.from(document.getElementById("productSelect").selectedOptions).map(option => option.value);
+  const otherProducts = document.getElementById("otherProducts").checked;
+  const preBooking = document.getElementById("preBooking").checked;
+
+  // Email validation
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!email) {
+    alert("Email is required.");
+    return;
+  }
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  // Prepare the data for EmailJS
+  const templateParams = {
+    name: name,
+    email: email,
+    personalMessage: personalMessage,
+    selected_products: selectedProducts.join(", "),
+    other_products: otherProducts ? "Yes" : "No",
+    pre_booking: preBooking ? "Yes" : "No",
+  };
+
+  // Send the email using EmailJS
+  emailjs.send("service_4o2zrfj", "template_1a4wf69", templateParams)
+    .then(() => {
+      alert("Thank you! Your interest has been recorded.");
+      closeForm();
+    })
+    .catch((error) => {
+      console.error("Failed to send email:", error);
+      alert("There was an error submitting your interest. Please try again later.");
+    });
 }
+
+
