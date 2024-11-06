@@ -71,6 +71,9 @@ function setLanguage(lang) {
     const introLine2Element = document.getElementById("introLine2");
     if (introLine2Element) introLine2Element.innerText = translations.intro.line2 || '';
 
+    const introLine3Element = document.getElementById("introLine3");
+    if (introLine3Element) introLine3Element.innerText = translations.intro.line3 || '';
+
     // Buttons
     const contactButton = document.getElementById("contactButton");
     if (contactButton) contactButton.innerText = translations.buttons.contact || '';

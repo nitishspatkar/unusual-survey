@@ -3,8 +3,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1:"It is not a typical survey. It's more personal than that. We want to collect your thoughts and impressions about these perhaps unknown products.",
-      line2: "We hope you enjoy exploring the list of products and photos and tell us what you think.",
+      line1:"It is not a typical survey. It's more personal than that!",
+      line3:"We are doing a little market research before going live. We want to hear your thoughts and impressions about these perhaps not-so-wellknown unusual products.",
+      line2: "Of course, there are many other products not listed here. For now, click and enjoy exploring the list of products-- also photos from where we come from-- and tell us what you think.",
     },
     buttons: {
       contact: "Contact Us",
@@ -125,8 +126,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1: "Es ist keine typische Umfrage. Es ist persönlicher als das. Mehr als Ihre Kontaktdaten möchten wir Ihre Gedanken und Eindrücke sammeln.",
-      line2: "Wir hoffen auch, dass Sie einfach Freude daran haben, unsere Produktliste und Fotos zu erkunden!",
+      line1: "Es ist keine typische Umfrage. Es ist persönlicher als das!",
+      line2: "Natürlich gibt es viele andere Produkte, die hier nicht aufgeführt sind. Für jetzt klicken Sie und genießen Sie es, die Produktliste zu erkunden - auch Fotos von wo wir herkommen - und sagen Sie uns, was Sie denken.",
+      line3: "Wir machen eine kleine Marktforschung, bevor wir live gehen. Wir möchten Ihre Gedanken und Eindrücke über diese vielleicht weniger bekannten, ungewöhnlichen Produkte hören.",
     },
     buttons: {
       contact: "Kontakt",
@@ -248,8 +250,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1: "Ce n'est pas un sondage classique. C'est plus personnel que cela. Plus que vos coordonnées, nous voulons recueillir vos pensées et impressions.",
-      line2: "Nous espérons également que vous apprécierez simplement explorer notre liste de produits et de photos!",
+      line1: "Ce n'est pas une enquête typique. C'est plus personnel que cela !",
+      line2: "Bien sûr, il existe de nombreux autres produits qui ne sont pas répertoriés ici. Pour l'instant, cliquez et profitez de l'exploration de la liste de produits - ainsi que des photos de notre région - et dites-nous ce que vous en pensez.",
+      line3: "Nous faisons une petite étude de marché avant de nous lancer. Nous voulons connaître vos pensées et impressions sur ces produits inhabituels peut-être pas si bien connus.",
     },
     buttons: {
       contact: "Contactez-nous",
