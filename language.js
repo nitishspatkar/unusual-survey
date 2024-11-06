@@ -78,6 +78,9 @@ function setLanguage(lang) {
     const aboutButton = document.getElementById("aboutButton");
     if (aboutButton) aboutButton.innerText = translations.buttons.about || '';
 
+    const contactButtonMobile = document.getElementById("contactButtonMobile");
+    if (contactButtonMobile) contactButtonMobile.innerText = translations.buttons.contact || '';
+
     // Footer
     const footerText = document.getElementById("footerText");
     if (footerText) footerText.innerText = translations.footer.text || '';

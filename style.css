@@ -1,6 +1,7 @@
 /* General body and font styling */
 body {
   font-family: 'Helvetica', sans-serif;
+  padding-bottom: 60px;
 }
 
 /* Header styling */
@@ -56,6 +57,9 @@ header p {
   .about-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+  #contactButtonMobile {
+    display: none;
+}
 }
 
 /* Single column layout for small screens */
