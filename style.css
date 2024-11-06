@@ -22,117 +22,46 @@ header p {
   margin-top: 4px;
 }
 
-/* Language switcher styling */
-.language-switcher button {
-  margin: 0 5px;
-  font-size: 0.875rem;
-  color: #555;
-}
-
-/* Intro section styling */
-.intro-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.intro-section h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.intro-section p {
-  font-size: 0.875rem;
-  color: #666;
-}
-
-
-/* Container and product list layout */
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.container.grid {
+/* Gallery grid styling for the about-cards section */
+.gallery-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-#productList, #details-container {
-  background-color: white;
+/* Individual gallery items */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  transition: transform 0.2s ease-in-out;
+/* Ensures images are sized correctly and centered */
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.product-item:hover {
+/* Subtle scale effect on hover for visual depth */
+.gallery-item:hover .about-image {
   transform: scale(1.05);
 }
 
-.product-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
 
-.product-name {
-  font-weight: 600;
-}
-
-.product-description {
-  text-align: center;
-  color: #666;
-  font-size: 0.875rem;
-}
-
-/* Product details styling */
-#details-container h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-#details-container p {
-  color: #4A5568;
-  font-size: 1rem;
-}
-
-#details-container .item {
-  margin-top: 1rem;
-}
-
-#details-container .item h3 {
-  color: #3182ce;
-  font-weight: 600;
-}
-
-#details-container .item p {
-  color: #4A5568;
-  font-size: 0.875rem;
-}
-
-/* Two-column layout for larger screens */
+/* Responsive three-column layout for tablets and larger screens */
 @media (min-width: 768px) {
-  .container.grid {
-    grid-template-columns: 1fr 2fr;
+  .about-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  #productList {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-  
-  #details-container {
-    display: block;
+}
+
+/* Single column layout for small screens */
+@media (max-width: 767px) {
+  .about-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

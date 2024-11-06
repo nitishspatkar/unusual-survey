@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,17 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
+  <!-- EmailJS setup -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() { emailjs.init("B03UDczpmPzTeYb5c"); })();
+  </script>
   <!-- Modular JavaScript files -->
-  <script  src="translation.js"></script>
-  <script  src="language.js"></script>
-  <script  src="product.js"></script>
-  <script  src="form.js"></script>
+  <script src="translation.js" defer></script>
+  <script src="language.js" defer></script>
+  <script src="product.js"></script>
+  <script src="form.js"></script>
+  <script src="main.js" defer></script>
 </head>
 <body class="bg-gray-100 font-sans">
   <header class="bg-white shadow p-4">
@@ -25,11 +31,12 @@
       <p id="about-visit" class="text-gray-700 font-semibold"></p>
     </section>
     
-    <section id="about-cards" class="space-y-8 max-w-lg mx-auto">
-    </section>
+    <div class="about-gallery" id="about-cards">
+      <!-- Dynamic images will be injected here by JavaScript -->
+    </div>
     
     <div class="text-center mt-8">
-      <a id="backToHome" href="index_de.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors"></a>
+      <a id="backToHome" href="index.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors"></a>
     </div>
   </main>
   

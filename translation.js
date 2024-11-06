@@ -97,7 +97,6 @@ const translationData = {
       text: "© 2024 unusual natural products",
     },
     about: {
-      heading: "About Us - unusual natural products",
       introduction: "We are a small family from the coastal region of Maharashtra. The region around Ratnagiri is world famous for Alphonso mangoes, coconuts, jackfruits, and cashews. We have been growing and using several of these products since generations on our about 50 acre land.",
       visit: "You are welcome to visit us!",
       cards: [
@@ -220,7 +219,6 @@ const translationData = {
       text: "© 2024 unusual natural products",
     },
     about: {
-      heading: "Über uns - ungewöhnliche Naturprodukte",
       introduction: "Wir sind eine kleine Familie aus der Küstenregion von Maharashtra. Die Region um Ratnagiri ist weltberühmt für Alphonso-Mangos, Kokosnüsse, Jackfrüchte und Cashewnüsse. Wir bauen seit Generationen viele dieser Produkte auf unserem etwa 50 Hektar großen Land an und nutzen sie.",
       visit: "Sie sind herzlich eingeladen, uns zu besuchen!",
       cards: [
@@ -344,7 +342,6 @@ const translationData = {
       text: "© 2024 unusual natural products",
     },
     about: {
-      heading: "À propos de nous - produits naturels inhabituels",
       introduction: "Nous sommes une petite famille de la région côtière du Maharashtra. La région autour de Ratnagiri est mondialement connue pour ses mangues Alphonso, noix de coco, jacquiers et noix de cajou. Nous cultivons et utilisons plusieurs de ces produits depuis des générations sur notre terrain d'environ 50 acres.",
       visit: "Vous êtes les bienvenus pour nous rendre visite !",
       cards: [
