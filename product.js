@@ -13,7 +13,12 @@ const iconMap = {
   marmalade: "gulkand.png",
   dry: "dry.png",
   leaves: "leaves.png",
-  amla: "amla.png"
+  amla: "amla.png",
+  tulsi: "tulsi.png",
+  turmetic: "termeric.png",
+  Shatavari: "shatavari.png",
+  Sandalwood: "Sandalwood.png",
+  KasturiManjal: "KasturiManjal.png"
 };
 
 // Function to show product details

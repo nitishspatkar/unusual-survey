@@ -73,15 +73,52 @@ const translationData = {
           { name: "Oil", desc: "Amla oil for hair health. Massage into scalp for stronger, healthier hair.", iconKey: "oil" }
         ]
       },
-      Jaswand: {
-        name: "Hibiscus",
-        description: "Hibiscus is popular in herbal teas and skincare, known for its vibrant color and antioxidant properties.",
+      Tulsi: {
+        name: "Tulsi",
+        description: "Tulsi, or Holy Basil, is revered for its immune-boosting and stress-relieving properties.",
         items: [
-          { name: "Dry", desc: "Dried hibiscus flowers for teas and skincare. Brew in hot water for a refreshing tea.", iconKey: "dry" },
-          { name: "Powder", desc: "Hibiscus powder for hair and skin. Add to face masks or hair treatments.", iconKey: "powder" },
-          { name: "Oil", desc: "Hibiscus oil for moisturizing skin and hair. Apply to hair for conditioning or to skin for hydration.", iconKey: "oil" }
+          { name: "Leaves", desc: "Dried Tulsi leaves for tea and aromatherapy. Brew to enjoy a calming and immune-boosting tea.", iconKey: "leaves" },
+          { name: "Powder", desc: "Tulsi powder for skincare and health. Mix with water or honey for a face pack or take as a supplement.", iconKey: "powder" },
+          { name: "Oil", desc: "Tulsi essential oil with soothing properties. Use for aromatherapy or dilute and apply to the skin.", iconKey: "oil" },
+          { name: "Tea", desc: "Relaxing herbal tea made from Tulsi leaves. Brew in hot water for a refreshing, stress-relieving drink.", iconKey: "powder" }
         ]
       },
+      Shatavari: {
+        name: "Shatavari",
+        description: "Shatavari is an adaptogenic herb known for supporting women’s health and hormonal balance.",
+        items: [
+          { name: "Powder", desc: "Shatavari powder, traditionally used for hormonal balance. Mix into milk or smoothies.", iconKey: "powder" },
+          { name: "Capsules", desc: "Shatavari in convenient capsule form for daily health support.", iconKey: "powder" },
+          { name: "Liquid Extract", desc: "Shatavari extract for easy use. Add drops to water for a daily health boost.", iconKey: "powder" }
+        ]
+      },
+      Sandalwood: {
+        name: "Sandalwood",
+        description: "Sandalwood is valued for its calming fragrance and skincare benefits, especially for soothing skin.",
+        items: [
+          { name: "Powder", desc: "Sandalwood powder, ideal for face packs and skincare. Mix with rose water for a calming mask.", iconKey: "powder" },
+          { name: "Oil", desc: "Sandalwood essential oil with a soothing aroma. Dilute and apply to skin or use in diffusers.", iconKey: "oil" },
+          { name: "Incense Sticks", desc: "Natural sandalwood incense sticks for a calming, fragrant ambiance.", iconKey: "incense_sticks" }
+        ]
+      },
+      KasturiManjal: {
+        name: "Kasturi Manjal",
+        description: "Also known as wild turmeric, Kasturi Manjal is used in skincare for brightening and antibacterial properties.",
+        items: [
+          { name: "Powder", desc: "Wild turmeric powder, gentle on the skin. Mix with yogurt or milk for a brightening face pack.", iconKey: "powder" },
+          { name: "Soap", desc: "Kasturi Manjal soap for natural skin cleansing and brightening.", iconKey: "soap" },
+          { name: "Scrub", desc: "Exfoliating scrub with wild turmeric for glowing skin. Apply to damp skin and gently scrub.", iconKey: "scrub" }
+        ]
+      },
+      Turmeric: {
+        name: "Turmeric",
+        description: "Turmeric is widely known for its anti-inflammatory and skin-brightening benefits.",
+        items: [
+          { name: "Powder", desc: "High-quality turmeric powder for culinary and skincare use. Add to recipes or mix into face masks.", iconKey: "powder" },
+          { name: "Capsules", desc: "Turmeric capsules for health support. Take daily for anti-inflammatory benefits.", iconKey: "powder" },
+          { name: "Golden Milk Mix", desc: "A warming blend of turmeric and spices for a soothing golden milk drink.", iconKey: "powder" }
+        ]
+      }
     },
     form: {
       heading: "I want to know more",
@@ -196,15 +233,52 @@ const translationData = {
           { name: "Öl", desc: "Amla-Öl für Haarpflege. In die Kopfhaut einmassieren für stärkeres, gesünderes Haar.", iconKey: "oil" }
         ]
       },
-      Jaswand: {
-        name: "Hibiskus",
-        description: "Hibiskus ist beliebt in Kräutertees und Hautpflege und bekannt für seine lebendige Farbe und antioxidativen Eigenschaften.",
+      Tulsi: {
+        name: "Tulsi",
+        description: "Tulsi, auch bekannt als Heiliges Basilikum, ist bekannt für seine immunstärkenden und stresslindernden Eigenschaften.",
         items: [
-          { name: "Getrocknet", desc: "Getrocknete Hibiskusblüten für Tees und Hautpflege. In heißem Wasser ziehen lassen für einen erfrischenden Tee.", iconKey: "dry" },
-          { name: "Pulver", desc: "Hibiskuspulver für Haar und Haut. Zu Gesichtsmasken oder Haarpflegeprodukten hinzufügen.", iconKey: "powder" },
-          { name: "Öl", desc: "Hibiskusöl für feuchtigkeitsspendende Haut- und Haarpflege. Auf das Haar zur Pflege oder auf die Haut für Feuchtigkeit auftragen.", iconKey: "oil" }
+          { name: "Blätter", desc: "Getrocknete Tulsi-Blätter für Tee und Aromatherapie. Aufbrühen, um einen beruhigenden und immunstärkenden Tee zu genießen.", iconKey: "leaves" },
+          { name: "Pulver", desc: "Tulsi-Pulver für Hautpflege und Gesundheit. Mit Wasser oder Honig für eine Gesichtsmaske oder als Nahrungsergänzung mischen.", iconKey: "powder" },
+          { name: "Öl", desc: "Tulsi-Öl mit beruhigenden Eigenschaften. Für Aromatherapie verwenden oder verdünnt auf die Haut auftragen.", iconKey: "oil" },
+          { name: "Tee", desc: "Entspannender Kräutertee aus Tulsi-Blättern. In heißem Wasser aufbrühen für ein erfrischendes, stresslinderndes Getränk.", iconKey: "powder" }
         ]
       },
+      Shatavari: {
+        name: "Shatavari",
+        description: "Shatavari ist ein adaptogenes Kraut, das für die Unterstützung der Frauengesundheit und des Hormonhaushalts bekannt ist.",
+        items: [
+          { name: "Pulver", desc: "Shatavari-Pulver, traditionell zur Unterstützung des Hormonhaushalts. In Milch oder Smoothies mischen.", iconKey: "powder" },
+          { name: "Kapseln", desc: "Shatavari in praktischer Kapselform zur täglichen Unterstützung der Gesundheit.", iconKey: "powder" },
+          { name: "Flüssigextrakt", desc: "Shatavari-Extrakt für einfache Anwendung. Einige Tropfen ins Wasser geben für einen täglichen Gesundheitsschub.", iconKey: "powder" }
+        ]
+      },
+      Sandalwood: {
+        name: "Sandelholz",
+        description: "Sandelholz wird für seinen beruhigenden Duft und die hautpflegenden Vorteile geschätzt, besonders zur Beruhigung der Haut.",
+        items: [
+          { name: "Pulver", desc: "Sandelholzpulver, ideal für Gesichtsmasken und Hautpflege. Mit Rosenwasser für eine beruhigende Maske mischen.", iconKey: "powder" },
+          { name: "Öl", desc: "Sandelholzöl mit beruhigendem Aroma. Verdünnt auf die Haut auftragen oder in Diffusoren verwenden.", iconKey: "oil" },
+          { name: "Räucherstäbchen", desc: "Natürliche Sandelholz-Räucherstäbchen für eine beruhigende, duftende Atmosphäre.", iconKey: "incense_sticks" }
+        ]
+      },
+      KasturiManjal: {
+        name: "Kasturi Manjal",
+        description: "Auch bekannt als wilde Kurkuma, wird Kasturi Manjal in der Hautpflege wegen seiner aufhellenden und antibakteriellen Eigenschaften verwendet.",
+        items: [
+          { name: "Pulver", desc: "Wilde Kurkuma-Pulver, sanft zur Haut. Mit Joghurt oder Milch für eine aufhellende Gesichtsmaske mischen.", iconKey: "powder" },
+          { name: "Seife", desc: "Kasturi Manjal Seife für eine natürliche Hautreinigung und Aufhellung.", iconKey: "soap" },
+          { name: "Peeling", desc: "Peeling mit wilder Kurkuma für strahlende Haut. Auf feuchte Haut auftragen und sanft peelen.", iconKey: "scrub" }
+        ]
+      },
+      turmeric: {
+        name: "Kurkuma",
+        description: "Kurkuma ist bekannt für seine entzündungshemmenden und hautaufhellenden Vorteile.",
+        items: [
+          { name: "Pulver", desc: "Hochwertiges Kurkumapulver für den kulinarischen und hautpflegenden Gebrauch. In Rezepte einfügen oder in Gesichtsmasken mischen.", iconKey: "powder" },
+          { name: "Kapseln", desc: "Kurkuma-Kapseln zur Unterstützung der Gesundheit. Täglich zur Entzündungshemmung einnehmen.", iconKey: "powder" },
+          { name: "Golden Milk Mischung", desc: "Eine wärmende Mischung aus Kurkuma und Gewürzen für ein beruhigendes Golden-Milk-Getränk.", iconKey: "powder" }
+        ]
+      }
     },    
     form: {
       heading: "Ich möchte mehr erfahren",
@@ -320,15 +394,52 @@ const translationData = {
           { name: "Huile", desc: "Huile d'amla pour la santé des cheveux. Masser dans le cuir chevelu pour des cheveux plus forts et plus sains.", iconKey: "oil" }
         ]
       },
-      Jaswand: {
-        name: "Hibiscus",
-        description: "L'hibiscus est populaire dans les tisanes et les soins de la peau, connu pour sa couleur vive et ses propriétés antioxydantes.",
+      Tulsi: {
+        name: "Tulsi",
+        description: "Le Tulsi, ou Basilic Sacré, est connu pour ses propriétés immunostimulantes et anti-stress.",
         items: [
-          { name: "Séchée", desc: "Fleurs d'hibiscus séchées pour les tisanes et les soins de la peau. Infuser dans de l'eau chaude pour un thé rafraîchissant.", iconKey: "dry" },
-          { name: "Poudre", desc: "Poudre d'hibiscus pour les soins des cheveux et de la peau. Ajouter aux masques pour le visage ou aux traitements capillaires.", iconKey: "powder" },
-          { name: "Huile", desc: "Huile d'hibiscus pour hydrater la peau et les cheveux. Appliquer sur les cheveux pour les revitaliser ou sur la peau pour hydrater.", iconKey: "oil" }
+          { name: "Feuilles", desc: "Feuilles séchées de Tulsi pour le thé et l'aromathérapie. Infusez pour profiter d'un thé apaisant et stimulant pour le système immunitaire.", iconKey: "leaves" },
+          { name: "Poudre", desc: "Poudre de Tulsi pour les soins de la peau et la santé. Mélangez avec de l'eau ou du miel pour un masque facial ou utilisez comme complément alimentaire.", iconKey: "powder" },
+          { name: "Huile", desc: "Huile essentielle de Tulsi aux propriétés apaisantes. Utilisez pour l'aromathérapie ou diluez et appliquez sur la peau.", iconKey: "oil" },
+          { name: "Thé", desc: "Thé aux herbes relaxant fait de feuilles de Tulsi. Infusez dans de l'eau chaude pour une boisson rafraîchissante et anti-stress.", iconKey: "tea" }
         ]
       },
+      Shatavari: {
+        name: "Shatavari",
+        description: "Le Shatavari est une plante adaptogène réputée pour soutenir la santé des femmes et l'équilibre hormonal.",
+        items: [
+          { name: "Poudre", desc: "Poudre de Shatavari, traditionnellement utilisée pour l'équilibre hormonal. À mélanger dans du lait ou des smoothies.", iconKey: "powder" },
+          { name: "Capsules", desc: "Shatavari en forme de capsules pratiques pour un soutien quotidien de la santé.", iconKey: "capsules" },
+          { name: "Extrait Liquide", desc: "Extrait de Shatavari pour une utilisation facile. Ajoutez quelques gouttes dans de l'eau pour un coup de pouce quotidien.", iconKey: "liquid_extract" }
+        ]
+      },
+      Sandalwood: {
+        name: "Bois de Santal",
+        description: "Le bois de santal est apprécié pour son parfum apaisant et ses bienfaits pour la peau, notamment pour calmer la peau.",
+        items: [
+          { name: "Poudre", desc: "Poudre de bois de santal, idéale pour les masques faciaux et les soins de la peau. Mélangez avec de l'eau de rose pour un masque apaisant.", iconKey: "powder" },
+          { name: "Huile", desc: "Huile essentielle de bois de santal avec un parfum apaisant. Diluez et appliquez sur la peau ou utilisez dans des diffuseurs.", iconKey: "oil" },
+          { name: "Bâtons d'encens", desc: "Bâtons d'encens naturels au bois de santal pour une ambiance parfumée et apaisante.", iconKey: "incense_sticks" }
+        ]
+      },
+      KasturiManjal: {
+        name: "Kasturi Manjal",
+        description: "Également connue sous le nom de curcuma sauvage, Kasturi Manjal est utilisée dans les soins de la peau pour ses propriétés éclaircissantes et antibactériennes.",
+        items: [
+          { name: "Poudre", desc: "Poudre de curcuma sauvage, douce pour la peau. Mélangez avec du yaourt ou du lait pour un masque éclatant.", iconKey: "powder" },
+          { name: "Savon", desc: "Savon Kasturi Manjal pour un nettoyage naturel et un éclaircissement de la peau.", iconKey: "soap" },
+          { name: "Gommage", desc: "Gommage exfoliant au curcuma sauvage pour une peau éclatante. Appliquez sur peau humide et exfoliez doucement.", iconKey: "scrub" }
+        ]
+      },
+      turmeric: {
+        name: "Curcuma",
+        description: "Le curcuma est largement connu pour ses bienfaits anti-inflammatoires et éclaircissants pour la peau.",
+        items: [
+          { name: "Poudre", desc: "Poudre de curcuma de haute qualité pour un usage culinaire et pour les soins de la peau. Ajoutez aux recettes ou mélangez dans des masques faciaux.", iconKey: "powder" },
+          { name: "Capsules", desc: "Capsules de curcuma pour le soutien de la santé. Prenez quotidiennement pour ses effets anti-inflammatoires.", iconKey: "powder" },
+          { name: "Mélange de Lait d'Or", desc: "Un mélange réconfortant de curcuma et d'épices pour une boisson au lait d'or apaisante.", iconKey: "powder" }
+        ]
+      }
     },    
     form: {
       heading: "Je veux en savoir plus",
