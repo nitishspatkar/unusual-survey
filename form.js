@@ -14,6 +14,7 @@ function openForm() {
     const email = document.getElementById("email").value;
     const personalMessage = document.getElementById("personalMessage").value;
     const selectedProducts = Array.from(document.getElementById("productSelect").selectedOptions).map(option => option.value);
+    const country = document.getElementById("country").value;
     const otherProducts = document.getElementById("otherProducts").checked;
     const preBooking = document.getElementById("preBooking").checked;
   
@@ -29,6 +30,10 @@ function openForm() {
       alert("Please enter a valid email address.");
       return;
     }
+    if (!country) {
+      alert("Please select your country.");
+      return;
+    }
   
     // Prepare the data for EmailJS
     const templateParams = {
@@ -36,6 +41,7 @@ function openForm() {
       email: email,
       personal_message: personalMessage,
       selected_products: selectedProducts.join(", "),
+      country: country,
       other_products: otherProducts ? "Yes" : "No",
       pre_booking: preBooking ? "Yes" : "No",
     };

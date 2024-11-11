@@ -27,18 +27,18 @@
     <button onclick="switchLanguage('fr')" class="mx-2">Français</button>
   </div>
   
-<!-- Intro Section -->
-<div class="container mx-auto p-4 text-center intro-section">
-  <h1 id="introTitle" class="text-3xl font-semibold mb-1">unusual</h1>
-  <h2 id="introSubtitle" class="text-lg text-gray-500 mb-3">natural products</h2>
-  <p id="introLine1" class="text-sm text-gray-700 mb-2"></p>
-  <p id="introLine2" class="text-sm text-gray-700 mb-4"></p>
-  <p id="introLine3" class="text-sm text-gray-700 mb-4"></p>
-  <div class="intro-buttons">
-    <button id="contactButton" onclick="openForm()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-sm">Contact Us</button>
-    <button id="aboutButton" class="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm">About Us</button>
-  </div>    
-</div>
+  <!-- Intro Section -->
+  <div class="container mx-auto p-4 text-center intro-section">
+    <h1 id="introTitle" class="text-3xl font-semibold mb-1">unusual</h1>
+    <h2 id="introSubtitle" class="text-lg text-gray-500 mb-3">natural products</h2>
+    <p id="introLine1" class="text-sm text-gray-700 mb-2"></p>
+    <p id="introLine2" class="text-sm text-gray-700 mb-4"></p>
+    <p id="introLine3" class="text-sm text-gray-700 mb-4"></p>
+    <div class="intro-buttons">
+      <button id="contactButton" onclick="openForm()" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-sm">Contact Us</button>
+      <button id="aboutButton" class="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm">About Us</button>
+    </div>    
+  </div>
   
   <!-- Main Content Area -->
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
@@ -83,43 +83,43 @@
           <div class="product-name text-sm font-medium" data-key="Amla.name"></div>
           <div class="product-description text-gray-600" data-key="Amla.description"></div>
         </div>
-
+        
         <!-- Tulsi -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Tulsi" onclick="showDetails('Tulsi')">
           <img src="./icons/tulsi.png" alt="Tulsi Icon" class="mx-auto w-16 h-16 mb-2">
           <div class="product-name text-sm font-medium" data-key="Tulsi.name"></div>
           <div class="product-description text-gray-600" data-key="Tulsi.description"></div>
         </div>
-
+        
         <!-- Shatavari -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Shatavari" onclick="showDetails('Shatavari')">
           <img src="./icons/shatavari.png" alt="Shatavari Icon" class="mx-auto w-16 h-16 mb-2">
           <div class="product-name text-sm font-medium" data-key="Shatavari.name"></div>
           <div class="product-description text-gray-600" data-key="Shatavari.description"></div>
         </div>
-
+        
         <!-- Sandalwood -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Sandalwood" onclick="showDetails('Sandalwood')">
           <img src="./icons/sandalwood.png" alt="Sandalwood Icon" class="mx-auto w-16 h-16 mb-2">
           <div class="product-name text-sm font-medium" data-key="Sandalwood.name"></div>
           <div class="product-description text-gray-600" data-key="Sandalwood.description"></div>
         </div>
-
+        
         <!-- KasturiManjal -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="KasturiManjal" onclick="showDetails('KasturiManjal')">
           <img src="./icons/kasturimanjal.png" alt="KasturiManjal Icon" class="mx-auto w-16 h-16 mb-2">
           <div class="product-name text-sm font-medium" data-key="KasturiManjal.name"></div>
           <div class="product-description text-gray-600" data-key="KasturiManjal.description"></div>
         </div>
-
+        
         <!-- Turmeric -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Turmeric" onclick="showDetails('Turmeric')">
           <img src="./icons/turmeric.png" alt="Turmeric Icon" class="mx-auto w-16 h-16 mb-2">
           <div class="product-name text-sm font-medium" data-key="turmeric.name"></div>
           <div class="product-description text-gray-600" data-key="turmeric.description"></div>
         </div>
-
-                
+        
+        
         <!-- Rose -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Rose" onclick="showDetails('Rose')">
           <img src="./icons/rose.png" alt="Rose Icon" class="mx-auto w-16 h-16 mb-2">
@@ -138,10 +138,10 @@
     </div>
   </div>
   
-<!-- Secondary "Contact Us" button at the bottom of content (not fixed) -->
-<div class="text-center mt-8 mb-4 md:hidden">
-  <button id="contactButtonMobile" onclick="openForm()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Contact Us</button>
-</div>
+  <!-- Secondary "Contact Us" button at the bottom of content (not fixed) -->
+  <div class="text-center mt-8 mb-4 md:hidden">
+    <button id="contactButtonMobile" onclick="openForm()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Contact Us</button>
+  </div>
   
   <!-- Footer -->
   <footer class="text-center p-4 text-gray-500" id="footerText"></footer>
@@ -151,6 +151,20 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
       <h2 id="formHeading" class="text-xl font-bold mb-4">Tell me more</h2>
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
+        
+        <!-- Country Selection Field -->
+        <label id="countryLabel" for="country" class="block text-sm font-medium text-gray-700">Country</label>
+        <select id="country" class="mt-1 mb-4 p-2 border rounded w-full" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="US">United States</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Rest of Europe">Rest of Europe</option>
+        </select>
+        
+        
+        <!-- Name, email, and other fields -->
         <label id="nameLabel" for="name" class="block text-sm font-medium text-gray-700">How would you like us to greet you:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
         

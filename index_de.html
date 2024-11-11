@@ -119,6 +119,7 @@
           <div class="product-description text-gray-600" data-key="turmeric.description"></div>
         </div>
         
+        
         <!-- Rose -->
         <div class="product-item text-center p-4 bg-white rounded-lg shadow hover:shadow-md cursor-pointer transition-transform transform hover:scale-105" data-name="Rose" onclick="showDetails('Rose')">
           <img src="./icons/rose.png" alt="Rose Icon" class="mx-auto w-16 h-16 mb-2">
@@ -150,6 +151,20 @@
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
       <h2 id="formHeading" class="text-xl font-bold mb-4">Tell me more</h2>
       <form id="interestForm" onsubmit="event.preventDefault(); submitForm();">
+        
+        <!-- Country Selection Field -->
+        <label id="countryLabel" for="country" class="block text-sm font-medium text-gray-700">Country</label>
+        <select id="country" class="mt-1 mb-4 p-2 border rounded w-full" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="US">United States</option>
+          <option value="Switzerland">Switzerland</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Rest of Europe">Rest of Europe</option>
+        </select>
+        
+        
+        <!-- Name, email, and other fields -->
         <label id="nameLabel" for="name" class="block text-sm font-medium text-gray-700">How would you like us to greet you:</label>
         <input type="text" id="name" class="mt-1 mb-4 p-2 border rounded w-full" required>
         
