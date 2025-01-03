@@ -3,9 +3,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1:"We are doing a little market research before going live. It is not a typical survey. It's more personal than that!",
-      line2:" We want to hear your thoughts and impressions about these perhaps not-so-wellknown unusual products. Would you like to try these?",
-      line3: "Of course, there are many more products not listed here. For now, click and enjoy exploring the list-- also photos from where we come from-- and tell us what you think.",
+      line1:"It is not a typical survey.",
+      line2:"We want to hear your thoughts and impressions about these perhaps not-so-wellknown unusual products. Would you like to try these?",
+      line3: "Of course, there are many more products not listed here. For now, We would like you to click and enjoy exploring the list-- also photos from where we come from-- and tell us what you think.",
     },
     buttons: {
       contact: "Contact Us",
@@ -156,9 +156,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1: "Wir machen eine kleine Marktforschung, bevor wir live gehen. Es ist keine typische Umfrage. Es ist persönlicher als das!",
-      line2: "Wir möchten Ihre Gedanken und Eindrücke über diese vielleicht weniger bekannten, ungewöhnlichen Produkte hören.",
-      line3: "Natürlich gibt es viele weitere Produkte, die hier nicht aufgeführt sind. Für jetzt klicken Sie und genießen Sie es, die Produktliste zu erkunden – auch Fotos von unserem Herkunftsort – und sagen Sie uns, was Sie denken.",
+      line1: "Es ist keine typische Umfrage.",
+      line2: "Wir möchten deine Gedanken und Eindrücke über diese vielleicht noch nicht so bekannten ungewöhnlichen Produkte erfahren. Würdest du sie gerne ausprobieren?",
+      line3: "Natürlich gibt es noch viele weitere Produkte, die hier nicht aufgeführt sind. Für jetzt, Wir möchten, dass du klickst und genießt die Liste zu erkunden - auch Fotos von wo wir kommen - und sagen Sie uns, was du denkst.",
     },
     buttons: {
       contact: "Kontakt",
@@ -309,9 +309,9 @@ const translationData = {
     intro: {
       title: "unusual",
       subtitle: "natural products",
-      line1: "Nous faisons une petite étude de marché avant de nous lancer. Ce n'est pas une enquête typique. C'est plus personnel que cela !",
-      line2: "Nous voulons connaître vos pensées et impressions sur ces produits inhabituels peut-être pas si bien connus.",
-      line3: "Bien sûr, il y a beaucoup plus de produits qui ne sont pas répertoriés ici. Pour l'instant, cliquez et profitez de l'exploration de la liste de produits – ainsi que des photos de notre région – et dites-nous ce que vous en pensez."
+      line1: "Il ne s'agit pas d'une enquête classique.",
+      line2: "Nous voulons connaître votre avis et vos impressions sur ces produits inhabituels, peut-être moins connus. Aimeriez-vous les essayer?",
+      line3: "Bien entendu, il existe de nombreux autres produits qui ne figurent pas dans cette liste. Pour l'instant, nous aimerions que vous cliquiez et que vous preniez plaisir à explorer la liste - ainsi que les photos de notre pays d'origine - et que vous nous disiez ce que vous en pensez."
     },
     buttons: {
       contact: "Contactez-nous",
