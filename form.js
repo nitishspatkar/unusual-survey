@@ -47,7 +47,7 @@ function openForm() {
     };
   
     // Send the email using EmailJS
-    emailjs.send("service_4o2zrfj", "template_1a4wf69", templateParams)
+    emailjs.send("service_l9ywr9s", "template_1a4wf69", templateParams)
       .then(() => {
         alert("Thank you! Your interest has been recorded.");
         closeForm();

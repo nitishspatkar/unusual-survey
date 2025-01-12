@@ -5,7 +5,7 @@ const translationData = {
       subtitle: "natural products",
       line1:"It is not a typical survey.",
       line2:"We want to hear your thoughts and impressions about these perhaps not-so-wellknown unusual products. Would you like to try these?",
-      line3: "Of course, there are many more products not listed here. For now, We would like you to click and enjoy exploring the list-- also photos from where we come from-- and tell us what you think. Click on Contact Us.",
+      line3: "Of course, there are many more products not listed here. For now, We would like you to click and enjoy exploring the list-- also photos from where we come from-- and tell us what you think by clicking on Contact Us",
     },
     buttons: {
       contact: "Contact Us",
